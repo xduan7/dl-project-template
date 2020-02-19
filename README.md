@@ -67,7 +67,7 @@ use cases for implemented features
 ## Future Tasks
 - [ ] python environment setup (requirements.txt, setup.py, etc.)
 - [ ] commonly-used utility functions
-    - [ ] random seeding (for numpy, Pandas, PyTorch, etc.)
+    - [ ] random seeding (for Numpy, Pandas, PyTorch, etc.)
     - [ ] data split with stratified and disjoint options
     - [ ] gpu/cpu specification
     - [ ] timeit wrapper
@@ -80,6 +80,7 @@ use cases for implemented features
 - [ ] minimal setup for hyper-parameter optimization
     - [ ] configuration file
 - [ ] tox configuration
+- [ ] flowchart for DL/ML projects
 
 
 ## Resources
