@@ -11,8 +11,7 @@ a table of content section might be a good idea
 ## Requirements
 ```text
 python>=3.6.1
-pandas>=1.0
-scikit-learn>=0.21
+numpy>=1.18
 torch>=1.4
 ```
 
@@ -50,6 +49,7 @@ The project layout with the usage for each folder is shown below:
 ├── notebooks           # jupyter notebooks for experiments and visualization 
 ├── src    
 │   ├── ...             # top-level scripts for deep learning
+│   ├── configs         # configurations (*.py) for deep learning experiments
 │   ├── processes       # data processing functions and classes
 │   ├── modules         # layers, modules, and networks
 │   ├── optimization    # optimizers and schedulers
@@ -65,20 +65,20 @@ use cases for implemented features
 
 
 ## Future Tasks
-- [ ] python environment setup (requirements.txt, setup.py, etc.)
+- [ ] python environment setup (requirements.txt, setup.py, Makefile, etc.)
 - [ ] commonly-used utility functions
-    - [ ] random seeding (for Numpy, Pandas, PyTorch, etc.)
+    - [x] random seeding (for Numpy, PyTorch, etc.)
     - [ ] data split with stratified and disjoint options
     - [ ] gpu/cpu specification
-    - [ ] timeit wrapper
+    - [ ] debug decorator
 - [ ] customizable neural network modules
     - [ ] fully-connected block
     - [ ] ResNet block
 - [ ] customizable optimization functions
     - [ ] optimizer constructor
     - [ ] learning rate scheduler constructor 
-- [ ] minimal setup for hyper-parameter optimization
-    - [ ] configuration file
+- [x] minimal setup for hyper-parameter optimization
+    - [x] configuration file
 - [ ] tox configuration
 - [ ] flowchart for DL/ML projects
 
