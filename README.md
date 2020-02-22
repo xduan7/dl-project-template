@@ -69,7 +69,7 @@ use cases for implemented features
 - [ ] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [ ] data split with stratified and disjoint options
-    - [ ] gpu/cpu specification
+    - [x] gpu/cpu specification
     - [ ] debug decorator
 - [ ] customizable neural network modules
     - [ ] fully-connected block
