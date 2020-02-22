@@ -66,11 +66,10 @@ use cases for implemented features
 
 ## Future Tasks
 - [ ] python environment setup (requirements.txt, setup.py, Makefile, etc.)
-- [ ] commonly-used utility functions
+- [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
-    - [ ] data split with stratified and disjoint options
     - [x] gpu/cpu specification
-    - [ ] debug decorator
+    - [x] debug decorator
 - [ ] customizable neural network modules
     - [ ] fully-connected block
     - [ ] ResNet block
