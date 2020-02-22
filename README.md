@@ -74,6 +74,7 @@ use cases for implemented features
 - [ ] customizable neural network modules
     - [ ] fully-connected block
     - [ ] ResNet block
+    - [ ] attention block
 - [ ] customizable optimization functions
     - [ ] optimizer constructor
     - [ ] learning rate scheduler constructor 
@@ -81,6 +82,7 @@ use cases for implemented features
     - [x] configuration file
 - [ ] tox configuration
 - [ ] flowchart for DL/ML projects
+- [ ] list of packages for better DL/ML projects
 
 
 ## Resources
