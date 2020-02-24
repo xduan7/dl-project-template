@@ -8,14 +8,19 @@ However, one can easily transfer and utilize the template to any project impleme
 a table of content section might be a good idea
 -->
 
-## Requirements
+## Dependencies
 ```text
-python = "^3.8"
-numpy = "^1.18.1"
-pandas = "^1.0.1"
-torch = "^1.4.0"
-scikit-learn = "^0.22.1"
-pylint = "^2.4.4"
+required:
+    python>=3.7
+    numpy>=1.18
+    pandas>=1.0
+    torch>=1.4
+    scikit-learn>=0.22
+    pylint>=2.4
+
+optional:
+    poetry>=0.12
+    GPUtil>=1.4
 ```
 
 
