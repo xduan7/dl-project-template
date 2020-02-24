@@ -10,9 +10,12 @@ a table of content section might be a good idea
 
 ## Requirements
 ```text
-python>=3.6.1
-numpy>=1.18
-torch>=1.4
+python = "^3.8"
+numpy = "^1.18.1"
+pandas = "^1.0.1"
+torch = "^1.4.0"
+scikit-learn = "^0.22.1"
+pylint = "^2.4.4"
 ```
 
 
@@ -31,6 +34,9 @@ Alternatively, you can simply download this repo in zipped format and get starte
     <img src="https://github.com/xduan7/dl-project-template/blob/master/docs/readme/download.png" width="90%">
 </p>
 
+<!---
+a table of content section might be a good idea
+-->
 
 ## Template Layout
 The project layout with the usage for each folder is shown below:
@@ -66,7 +72,7 @@ use cases for implemented features
 
 
 ## Future Tasks
-- [x] python environment setup (requirements.txt, Makefile, etc.)
+- [x] python environment setup (pyproject.toml, Makefile, etc.)
 - [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
@@ -80,10 +86,10 @@ use cases for implemented features
     - [ ] learning rate scheduler constructor 
 - [x] minimal setup for hyper-parameter optimization
     - [x] configuration file
-- [ ] tox configuration
-- [ ] flowchart for DL/ML projects
-- [ ] list of packages for better DL/ML projects
+- [ ] flowchart for DL/ML projects with packages
 - [ ] documentation
+    - [ ] getting started
+    - [ ] module docstrings
 
 
 ## Resources
