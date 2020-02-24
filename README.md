@@ -39,9 +39,14 @@ Alternatively, you can simply download this repo in zipped format and get starte
     <img src="https://github.com/xduan7/dl-project-template/blob/master/docs/readme/download.png" width="90%">
 </p>
 
-<!---
-a table of content section might be a good idea
--->
+Next, you can install all the dependencies by typing the following command in project root:
+```bash
+make install # or "poetry install"
+```
+
+Finally, you can wrap up the setup by manually install and update any packages you'd like. 
+Please refer to the [Extra Packages](#extra-packages) section for some awesome packages. 
+
 
 ## Template Layout
 The project layout with the usage for each folder is shown below:
@@ -97,6 +102,9 @@ use cases for implemented features
     - [ ] module docstrings
 
 
+## Extra Packages
+
+
 ## Resources
 Readings:
  - [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
@@ -113,5 +121,5 @@ Other Machine Learning Template Repos:
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for more details.
 
