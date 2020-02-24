@@ -41,6 +41,7 @@ The project layout with the usage for each folder is shown below:
 ├── data
 |   ├── ...             # data indexes and other descriptor files
 │   ├── raw             # downloaded and untreated data
+│   ├── cached          # cached files during processing
 │   ├── interm          # intermediate results during processing
 │   └── processed       # processed data (features, targets) ready for learning
 ├── docs                # documentations (txt, doc, jpeg, etc.)
@@ -65,7 +66,7 @@ use cases for implemented features
 
 
 ## Future Tasks
-- [ ] python environment setup (requirements.txt, setup.py, Makefile, etc.)
+- [x] python environment setup (requirements.txt, Makefile, etc.)
 - [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
@@ -82,6 +83,7 @@ use cases for implemented features
 - [ ] tox configuration
 - [ ] flowchart for DL/ML projects
 - [ ] list of packages for better DL/ML projects
+- [ ] documentation
 
 
 ## Resources
