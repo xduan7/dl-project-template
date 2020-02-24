@@ -1,3 +1,7 @@
+PYTHON := $(shell which python)
+PROJ_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+PYTHONPATH := $(PYTHONPATH):$(PROJ_DIR)
+
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "    install:    install dependencies (require poetry)"
@@ -6,25 +10,28 @@ help:
 	@echo "    test:       test trained model on test dataset"
 	@echo "    lint:       perform lint checking for python files"
 	@echo "    clean:      remove all temporary/cached data files"
-	# TODO: add more help instructions here
+# TODO: add more help instructions here
 
 install:
 	@echo "installing dependencies with poetry ..."
-	@poetry install
+	poetry install
 
 download:
 	@echo "downloading ... "
+# TODO: execute the script and download data to ./data/raw
 
 train:
 	@echo "training ..."
-	# TODO: train with certain config file
+# TODO: train with certain config file
 
 test:
 	@echo "testing ..."
+# TODO: test some saved model on holdout set
 
 lint:
 	@echo "checking with pylint ...."
-	pylint src/**/*.py
+	pylint src/**/*.py --generated-members=torch.* || true
 
 clean:
-	@find data/cached/ -type f ! -name '.gitignore' -delete
+	@echo "cleaning up the cached data directory ...."
+	find data/cached/ -type f ! -name '.gitignore' -delete
