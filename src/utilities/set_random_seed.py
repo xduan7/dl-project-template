@@ -1,25 +1,36 @@
-""" 
+"""
 File Name:          set_random_seed.py
 Project:            dl-project-template
-    
+
 File Description:
 
-    Set random state for all packages.
+    Set random state for all packages for reproducible results.
 
 """
-import torch
 import random
 import logging
+
+import torch
 import numpy as np
 
 
-_logger = logging.getLogger(__name__)
+_LOGGER = logging.getLogger(__name__)
 
 
 def set_random_seed(
         random_seed: int,
         deterministic_cudnn_flag: bool,
 ) -> None:
+    """seed the random generators for packages
+
+    Set the random seeds for Numpy and PyTorch, and set CuDNN deterministic
+    flag if necessary for strictly reproducible results.
+
+    :param random_seed: integer as random seed
+    :param deterministic_cudnn_flag: boolean flag for strictly deterministic
+    CuDNN computation
+    :return: None
+    """
 
     # effective for both CPU and GPU
     torch.manual_seed(random_seed)
@@ -32,7 +43,7 @@ def set_random_seed(
             torch.backends.cudnn.deterministic = True
             torch.backends.cudnn.benchmark = False
         except Exception:
-            _logger.warning(
+            _LOGGER.warning(
                 'Failed to configure CuDNN for deterministic computation '
                 'and therefore reproducible results.'
             )
@@ -40,4 +51,4 @@ def set_random_seed(
     random.seed(random_seed)
     np.random.seed(random_seed)
 
-    # TODO: add random seeding for all other packages here
+    # add random seeding for all other packages here

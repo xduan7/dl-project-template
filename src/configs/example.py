@@ -1,7 +1,7 @@
-""" 
+"""
 File Name:          example.py
 Project:            dl-project-template
-    
+
 File Description:
 
     This is an example of the configuration file, with two code segments:
@@ -31,13 +31,13 @@ _deterministic_cudnn_flag: bool = True
 # "preferred" GPUs for computation device specification
 # to use CPU only, set to None or empty list []; otherwise, set to a list
 # of integers representing preferred GPUs for this experiment
-_preferred_gpu_list = Optional[List[int]] = [0, 1]
+_preferred_gpu_list: Optional[List[int]] = [0, 1]
 
 # flag for using multiple GPUs (nn.DataParallel) for this experiment
 _multi_gpu_flag: bool = False
 
 
-config = {
+CONFIG = {
     'experiment_name': _experiment_name,
 
     'random_state': _random_state,

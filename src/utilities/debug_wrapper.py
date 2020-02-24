@@ -1,14 +1,11 @@
-""" 
+"""
 File Name:          debug_wrapper.py
 Project:            dl-project-template
-    
-File Description:   
 
-    Function wrapper (decorator) for debugging purposes. The decorator will
-    log the following:
-    * function name and parameters
-    * function execution time
-    * exception and traceback if the function is not finished properly
+File Description:
+
+    Function wrapper (decorator) for debugging purposes. Check the function
+    docstring for more details.
 
     Reference: https://stackoverflow.com/a/39643469
 
@@ -25,6 +22,18 @@ _DEBUG_WRAPPER_LOG_LEVEL = logging.INFO
 def debug_wrapper(
         func: Callable,
 ) -> Callable:
+    """function wrapper (decorator) for debugging purpose
+
+    This function will log the followings:
+    * function entry and exit
+    * function execution time
+    * function exception if exist
+    The log level is configurable with hidden constant
+    '_DEBUG_WRAPPER_LOG_LEVEL' in this file.
+
+    :param func: function to be wrapped and debugged
+    :return: wrapped function ready for debugging
+    """
 
     @wraps(func)
     def _debug_wrapper(
@@ -50,8 +59,9 @@ def debug_wrapper(
         try:
             _ret = func(*args, **kwargs)
             _log(msg=f'Function f{_func_name} finished properly.')
-        except Exception as e:
-            _func_logger.exception(f'{e}')
+        except Exception as _exception:
+            _exception_str = str(_exception)
+            _func_logger.exception(_exception_str)
         _exe_time = time.time() - _start_time
 
         _log(msg=f'Function execution took {_exe_time:.2f} seconds.')
