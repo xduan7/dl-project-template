@@ -21,3 +21,5 @@ LOG_DIR_PATH = os.path.abspath('../logs')
 MODEL_DIR_PATH = os.path.abspath('../models')
 
 # __all__
+# check the following article for organized __init__:
+# https://towardsdatascience.com/whats-init-for-me-d70a312da583

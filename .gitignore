@@ -220,3 +220,4 @@ data/cached/*
 data/processed/*
 .idea/
 **/.DS_Store
+poetry.lock
