@@ -105,56 +105,54 @@ use cases for implemented features
 
 ## Extra Packages
 ### Data Validation and Cleaning
-- [Great Expectation](https://docs.greatexpectations.io/en/latest/): data **validation**, **documenting**, and **profiling**
-- [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data **cleaning**
-- [PyDQC](https://github.com/SauceCat/pydqc): automatic data **quality checking**
+- [Great Expectation](https://docs.greatexpectations.io/en/latest/): data validation, documenting, and profiling
+- [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
+- [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality checking
 
-Performance and Caching
+### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
 - [Dask](https://dask.org/): parallel computing library
 - [Ray](https://ray.io/): framework for distributed applications
 - [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/) 
 - [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
 
-Version Control and Workflows
-- [DVC](https://dvc.org/): a open source version control system for machine learning projects
-- [Pachyderm](https://www.pachyderm.com/): a tool for production data pipelines (versioning, lineage, and parallelization)
-- [d6tflow](https://d6tflow.readthedocs.io/en/latest/): a Python library for building highly effective data science workflows
+### Data Version Control and Workflow
+- [DVC](https://dvc.org/): data version control system
+- [Pachyderm](https://www.pachyderm.com/): data pipelining (versioning, lineage/tracking, and parallelization)
+- [d6tflow](https://d6tflow.readthedocs.io/en/latest/): effective data workflow
 
-Visualization and Analysis
-- [Seaborn](https://seaborn.pydata.org/): a Python data visualization library based on matplotlib
-- [Plotly.py](https://plot.ly/python/): an open-source, interactive graphing library for Python
-- [Altair](https://altair-viz.github.io/): a declarative statistical visualization library for Python, based on Vega and Vega-Lite
-- [Chartify](https://github.com/spotify/chartify): a Python library that makes it easy for data scientists to create charts
-- [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): create HTML profiling reports from pandas DataFrame objects
+### Visualization and Analysis
+- [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
+- [Plotly.py](https://plot.ly/python/): interactive browser-based graphing library
+- [Altair](https://altair-viz.github.io/): declarative visualization based on [Vega](http://vega.github.io/vega) and [Vega-Lite](http://vega.github.io/vega-lite)
+- [Chartify](https://github.com/spotify/chartify): easy and flexible charts
+- [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): HTML profiling reports for Pandas DataFrames
 
-Machine Learning Lifecycles
-- [NNI](https://nni.readthedocs.io/en/latest/): a lightweight but powerful toolkit for automate machine learning lifecycle, including feature engineering, neural architecture search, model compression and hyperparameter tuning
-- [Comet.ml](https://www.comet.ml/site/): a self-hosted and cloud-based meta machine learning platform allowing data scientists and teams to track, compare, explain and optimize experiments and models
+### Project Lifecycles and Hyperparameter Optimization
+- [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
+- [Comet.ml](https://www.comet.ml/site/): self-hosted and cloud-based meta machine learning platform for tracking, comparing, explaining and optimizing experiments and models
+- [MLflow](https://mlflow.org/): platform for ML lifecycle , including experimentation, reproducibility and deployment
+- [Optuna](https://optuna.org/): automatic hyperparameter optimization framework
+- [Hyperopt](http://hyperopt.github.io/hyperopt): serial and parallel optimization
 
-Hyperparameter Optimization
-- [Optuna](https://optuna.org/): an automatic hyperparameter optimization software framework
-- [Hyperopt](http://hyperopt.github.io/hyperopt): a Python library for serial and parallel optimization over awkward search spaces
-- [MLflow](https://mlflow.org/): an open source platform to manage the ML lifecycle, including experimentation, reproducibility and deployment
-
-PyTorch Extensions
-- [Ignite](https://pytorch.org/ignite/): is a high-level library to help with training neural networks in PyTorch
-- [PyRo](https://pyro.ai/): deep universal probabilistic programming with Python and PyTorch
-- [DGL](http://dgl.ai/): an easy-to-use, high performance and scalable Python package for deep learning on graphs
-- [PyGeometric](https://pytorch-geometric.readthedocs.io/): a geometric deep learning extension library for PyTorch
+### PyTorch Extensions
+- [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
+- [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
+- [DGL](http://dgl.ai/): package for deep learning on graphs
+- [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
 
 
 ## Resources
-Readings:
+### Readings:
 - [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
 - [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) by Martin Zinkevich
  
-Other Machine Learning Template Repos:
+### Other Machine Learning Template Repos:
 - [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): "a logical, reasonably standardized, but flexible project structure for doing and sharing data science work"
 - [PyTorch Template Project](https://github.com/victoresque/pytorch-template): "PyTorch deep learning project made easy"
 - [PyTorch Project Template](https://github.com/L1aoXingyu/Deep-Learning-Project-Template): "a best practice for deep learning project template architecture"
 
-Datasets:
+### Datasets:
 - [Google Dataset Search](https://datasetsearch.research.google.com): "a search engine from Google that helps researchers locate online data that is freely available for use"
 - [OpenML](https://www.openml.org/): "an online machine learning platform for sharing and organizing data, machine learning algorithms and experiments"
 - [OpenBlender](https://www.openblender.io): "self-service platform to enrich datasets with correlated variables from thousands of live-streamed open data sources"
