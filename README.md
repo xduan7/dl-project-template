@@ -104,16 +104,17 @@ use cases for implemented features
 
 
 ## Extra Packages
-Data Validation and Cleaning
-- [Great Expectation](https://docs.greatexpectations.io/en/latest/): a leading tool for validating, documenting, and profiling data
-- [PyJanitor](https://pyjanitor.readthedocs.io/): extends Pandas with a verb-based API, providing convenient data cleaning routines for repetitive tasks
-- [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality check toolkit 
+###Data Validation and Cleaning
+- [Great Expectation](https://docs.greatexpectations.io/en/latest/): data **validation**, **documenting**, and **profiling**
+- [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data **cleaning**
+- [PyDQC](https://github.com/SauceCat/pydqc): automatic data **quality checking**
 
-Parallelization and Caching
-- [Numba](https://numba.pydata.org/): an open source JIT compiler that translates a subset of Python and NumPy code into fast machine code
-- [Dask](https://dask.org/): a flexible parallel computing library for analytics
-- [Modin](http://modin.readthedocs.io/): "speed up your Pandas workflows by changing a single line of code"
-- [Joblib](https://joblib.readthedocs.io/en/latest/): lightweight pipelining in Python (transparent disk-caching and easy simple parallel computing)
+Performance and Caching
+- [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
+- [Dask](https://dask.org/): parallel computing library
+- [Ray](https://ray.io/): framework for distributed applications
+- [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/) 
+- [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
 
 Version Control and Workflows
 - [DVC](https://dvc.org/): a open source version control system for machine learning projects
@@ -125,7 +126,7 @@ Visualization and Analysis
 - [Plotly.py](https://plot.ly/python/): an open-source, interactive graphing library for Python
 - [Altair](https://altair-viz.github.io/): a declarative statistical visualization library for Python, based on Vega and Vega-Lite
 - [Chartify](https://github.com/spotify/chartify): a Python library that makes it easy for data scientists to create charts
-- [Pandas Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): create HTML profiling reports from pandas DataFrame objects
+- [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): create HTML profiling reports from pandas DataFrame objects
 
 Machine Learning Lifecycles
 - [NNI](https://nni.readthedocs.io/en/latest/): a lightweight but powerful toolkit for automate machine learning lifecycle, including feature engineering, neural architecture search, model compression and hyperparameter tuning
