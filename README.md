@@ -148,14 +148,13 @@ use cases for implemented features
 - [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) by Martin Zinkevich
  
 ### Other Machine Learning Template Repos:
-- [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): "a logical, reasonably standardized, but flexible project structure for doing and sharing data science work"
-- [PyTorch Template Project](https://github.com/victoresque/pytorch-template): "PyTorch deep learning project made easy"
-- [PyTorch Project Template](https://github.com/L1aoXingyu/Deep-Learning-Project-Template): "a best practice for deep learning project template architecture"
+- [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): a logical, reasonably standardized, but flexible project structure
+- [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
 
 ### Datasets:
-- [Google Dataset Search](https://datasetsearch.research.google.com): "a search engine from Google that helps researchers locate online data that is freely available for use"
-- [OpenML](https://www.openml.org/): "an online machine learning platform for sharing and organizing data, machine learning algorithms and experiments"
-- [OpenBlender](https://www.openblender.io): "self-service platform to enrich datasets with correlated variables from thousands of live-streamed open data sources"
+- [Google Dataset Search](https://datasetsearch.research.google.com): a search engine for freely-available online data
+- [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
+- [OpenBlender](https://www.openblender.io): live-streamed open data sources
 
 
 ## Authors
