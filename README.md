@@ -99,7 +99,7 @@ use cases for implemented features
 - [ ] process flowchart for DL/ML projects
 - [x] extra packages for DL/ML projects
 - [ ] documentation
-    - [ ] getting started
+    - [x] getting started
     - [ ] module docstrings
 
 
