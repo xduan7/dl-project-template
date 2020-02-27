@@ -8,7 +8,7 @@ help:
 	@echo "    download:   download dataset into ./data/raw"
 	@echo "    train:      train model with given config file"
 	@echo "    test:       test trained model on test dataset"
-	@echo "    lint:       perform lint checking for python files"
+	@echo "    check:      perform flake8 checking for python files"
 	@echo "    clean:      remove all temporary/cached data files"
 # TODO: add more help instructions here
 
@@ -28,9 +28,11 @@ test:
 	@echo "testing ..."
 # TODO: test some saved model on holdout set
 
-lint:
-	@echo "checking with pylint ...."
-	pylint src/**/*.py --generated-members=torch.* || true
+check:
+	@echo "checking source code with flake8 ...."
+	@flake8 src || true
+# @pylint src/**/*.py --generated-members=torch.* || true
+
 
 clean:
 	@echo "cleaning up the cached data directory ...."
