@@ -17,7 +17,7 @@ File Description:
         from src.configs.example import config
 
 """
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 
 
 # experiment name associated with this set of configurations
@@ -36,7 +36,14 @@ _preferred_gpu_list: Optional[List[int]] = [0, 1]
 # flag for using multiple GPUs (nn.DataParallel) for this experiment
 _multi_gpu_flag: bool = False
 
+# optimizer configurations
+_optimizer__algorithm: str = 'SGD'
+_optimizer__kwargs: Dict[str, Any] = {
+    'lr': 1e-4,
+    'momentum': 0.9,
+}
 
+# TODO: can we make this constant?
 CONFIG = {
     'experiment_name': _experiment_name,
 
@@ -45,4 +52,7 @@ CONFIG = {
 
     'preferred_gpu_list': _preferred_gpu_list,
     'multi_gpu_flag': _multi_gpu_flag,
+
+    'optimizer__algorithm': _optimizer__algorithm,
+    'optimizer__kwargs': _optimizer__kwargs,
 }

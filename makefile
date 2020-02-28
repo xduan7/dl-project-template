@@ -31,7 +31,7 @@ test:
 check:
 	@echo "checking source code with flake8 ...."
 	@flake8 src || true
-	@echo "checking source code with flake8 ...."
+	@echo "checking source code with pylint ...."
 	@pylint src/**/*.py --generated-members=torch.* || true
 
 clean:

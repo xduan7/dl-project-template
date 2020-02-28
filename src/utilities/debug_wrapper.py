@@ -15,7 +15,7 @@ import logging
 from typing import Callable, Any
 from functools import wraps, partial
 
-# _logger = logging.getLogger(__name__)
+# _LOGGER = logging.getLogger(__name__)
 _DEBUG_WRAPPER_LOG_LEVEL = logging.INFO
 
 

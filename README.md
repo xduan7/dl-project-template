@@ -92,7 +92,7 @@ use cases for implemented features
     - [ ] ResNet block
     - [ ] attention block
 - [ ] customizable optimization functions
-    - [ ] optimizer constructor
+    - [x] optimizer constructor
     - [ ] learning rate scheduler constructor 
 - [x] minimal setup for hyperparameter optimization
     - [x] configuration file
