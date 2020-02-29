@@ -18,7 +18,7 @@ import os
 import logging
 
 # import desired configurations
-from src.configs.example import CONFIG
+from src.configs.example_config import CONFIG
 print(f'using configuration \'{CONFIG["experiment_name"]}\' ...')
 # for other files, simply from src import CONFIG
 

@@ -91,9 +91,9 @@ use cases for implemented features
     - [ ] fully-connected block
     - [ ] ResNet block
     - [ ] attention block
-- [ ] customizable optimization functions
+- [x] customizable optimization functions
     - [x] optimizer constructor
-    - [ ] learning rate scheduler constructor 
+    - [x] learning rate scheduler constructor 
 - [x] minimal setup for hyperparameter optimization
     - [x] configuration file
 - [ ] process flowchart for DL/ML projects

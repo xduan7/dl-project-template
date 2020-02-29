@@ -1,5 +1,5 @@
 """
-File Name:          example.py
+File Name:          example_config.py
 Project:            dl-project-template
 
 File Description:
@@ -22,7 +22,7 @@ from typing import Optional, List, Dict, Any
 
 # experiment name associated with this set of configurations
 # this could be used for various bookkeeping purposes
-_experiment_name: str = 'example'
+_experiment_name: str = 'example_configuration'
 
 # random state and deterministic flag for reproducible results
 _random_state: int = 0
@@ -37,14 +37,19 @@ _preferred_gpu_list: Optional[List[int]] = [0, 1]
 _multi_gpu_flag: bool = False
 
 # optimizer configurations
-_optimizer__algorithm: str = 'SGD'
+_optimizer: str = 'SGD'
 _optimizer__kwargs: Dict[str, Any] = {
     'lr': 1e-4,
     'momentum': 0.9,
 }
+_lr_scheduler: str = 'StepLr'
+_lr_scheduler__kwargs: Dict[str, Any] = {
+    'step_size': 10,
+}
 
-# TODO: can we make this constant?
-CONFIG = {
+# TODO: make this constant?
+# TODO: automate the dict construction
+CONFIG: Dict[str, Any] = {
     'experiment_name': _experiment_name,
 
     'random_state': _random_state,
@@ -53,6 +58,9 @@ CONFIG = {
     'preferred_gpu_list': _preferred_gpu_list,
     'multi_gpu_flag': _multi_gpu_flag,
 
-    'optimizer__algorithm': _optimizer__algorithm,
+    'optimizer': _optimizer,
     'optimizer__kwargs': _optimizer__kwargs,
+
+    'lr_scheduler': _lr_scheduler,
+    'lr_scheduler__kwargs': _lr_scheduler__kwargs,
 }
