@@ -17,7 +17,7 @@ File Description:
         from src.configs.example import config
 
 """
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Final
 
 
 # experiment name associated with this set of configurations
@@ -48,19 +48,12 @@ _lr_scheduler__kwargs: Dict[str, Any] = {
 }
 
 # TODO: make this constant?
-# TODO: automate the dict construction
-CONFIG: Dict[str, Any] = {
-    'experiment_name': _experiment_name,
-
-    'random_state': _random_state,
-    'deterministic_cudnn_flag': _deterministic_cudnn_flag,
-
-    'preferred_gpu_list': _preferred_gpu_list,
-    'multi_gpu_flag': _multi_gpu_flag,
-
-    'optimizer': _optimizer,
-    'optimizer__kwargs': _optimizer__kwargs,
-
-    'lr_scheduler': _lr_scheduler,
-    'lr_scheduler__kwargs': _lr_scheduler__kwargs,
+# dictionary that maps names of each configuration to their object
+# e.g. 'experiment_name': _experiment_name, 'random_state': _random_state, etc.
+# note that the local configuration variable names must start with '_', but
+# the underscores are stripped away in the CONFIG dictionary
+CONFIG: Final[Dict[str, Any]] = {
+    variable_name[1:]: variable
+    for variable_name, variable in locals().items() if
+    variable_name.startswith('_') and not variable_name.startswith('__')
 }
