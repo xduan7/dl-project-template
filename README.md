@@ -19,6 +19,7 @@ required:
 
 optional:
     poetry>=0.12
+    flake8>=3.7
     pylint>=2.4
     GPUtil>=1.4
 ```
@@ -89,7 +90,7 @@ use cases for implemented features
     - [x] debug decorator
 - [ ] customizable neural network modules
     - [ ] fully-connected block
-    - [ ] ResNet block
+    - [x] residual block
     - [ ] attention block
 - [x] customizable optimization functions
     - [x] optimizer constructor
