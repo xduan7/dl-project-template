@@ -83,18 +83,21 @@ use cases for implemented features
 
 
 ## Future Tasks
-- [x] python environment setup (pyproject.toml, Makefile, etc.)
-- [x] commonly-used utility functions
+- [x] python environment setup (pyproject.toml, makefile, etc.)
+- [ ] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
     - [x] debug decorator
+    - [ ] getter of class from module with target name
 - [ ] customizable neural network modules
-    - [ ] fully-connected block
-    - [x] residual block
+    - [ ] PyTorch activation function
+    - [ ] configurable dense block
+    - [x] convolutional residual block
+    - [ ] dense residual block
     - [ ] attention block
 - [x] customizable optimization functions
-    - [x] optimizer constructor
-    - [x] learning rate scheduler constructor 
+    - [x] PyTorch optimizer getter
+    - [x] PyTorch learning rate scheduler getter 
 - [x] minimal setup for hyperparameter optimization
     - [x] configuration file
 - [ ] process flowchart for DL/ML projects
