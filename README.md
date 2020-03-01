@@ -100,7 +100,7 @@ use cases for implemented features
     - [x] PyTorch learning rate scheduler getter 
 - [x] minimal setup for hyperparameter optimization
     - [x] configuration file
-- [ ] process flowchart for DL/ML projects
+- [ ] process flowchart for DL/ML projects (less than 10 steps with deliverables)
 - [x] extra packages for DL/ML projects
 - [ ] documentation
     - [x] getting started
@@ -119,6 +119,7 @@ use cases for implemented features
 - [Ray](https://ray.io/): framework for distributed applications
 - [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/) 
 - [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
+- [RAPIDS](https://rapids.ai/): GPU acceleration for data science
 
 ### Data Version Control and Workflow
 - [DVC](https://dvc.org/): data version control system
