@@ -105,6 +105,7 @@ use cases for implemented features
 - [ ] documentation
     - [x] getting started
     - [ ] module docstrings
+- [ ] table of content section in readme
 
 
 ## Extra Packages
@@ -128,6 +129,7 @@ use cases for implemented features
 
 ### Visualization and Analysis
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
+- [HiPlot](https://facebookresearch.github.io/hiplot/): interactive high-dimensional visualization for correlation and pattern discovery
 - [Plotly.py](https://plot.ly/python/): interactive browser-based graphing library
 - [Altair](https://altair-viz.github.io/): declarative visualization based on [Vega](http://vega.github.io/vega) and [Vega-Lite](http://vega.github.io/vega-lite)
 - [Chartify](https://github.com/spotify/chartify): easy and flexible charts
@@ -145,6 +147,9 @@ use cases for implemented features
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
+
+### Miscellaneous
+- [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
 
 
 ## Resources
