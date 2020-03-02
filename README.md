@@ -84,13 +84,13 @@ use cases for implemented features
 
 ## Future Tasks
 - [x] python environment setup (pyproject.toml, makefile, etc.)
-- [ ] commonly-used utility functions
+- [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
     - [x] debug decorator
-    - [ ] getter of class from module with target name
+    - [x] getter of class from module with target name
 - [ ] customizable neural network modules
-    - [ ] PyTorch activation function
+    - [x] PyTorch activation function
     - [ ] configurable dense block
     - [x] convolutional residual block
     - [ ] attention block

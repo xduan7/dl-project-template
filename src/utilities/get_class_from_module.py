@@ -19,6 +19,23 @@ def get_class_from_module(
         class_name: str,
         module: ModuleType,
 ) -> type:
+    """get a class as type instance with given name from the given module
+
+    This function will first inspect the module and get all the classes (
+    their names and types), then if the given class name matches any of the
+    class name inside the module, the function will simply return the class.
+    Otherwise, the functions will check the close matches. If there is one
+    close match inside the whole module, the function will take it and
+    proceed with warning. If there are more than one close matches,
+    the function will raise value error indicating that the given name
+    imposes ambiguity.
+
+    :param class_name: name of the target class in string
+    :param module: module to inspect and search from
+    :return: class (as python type instance) if the given class name (1)
+    matches one of the classes inside the module exactly; or (2) has a
+    single close match with all the classes inside the module
+    """
 
     _class_dict: Dict[str, type] = {
         _module_member[0]: _module_member[1]
@@ -43,7 +60,7 @@ def get_class_from_module(
                 f'Ambiguity with class name \'{class_name}\' . Please pick ' \
                 f'from any of these classes from module \'{module}\': ' \
                 f'{_close_match_names}'
-            raise AttributeError(_error_msg)
+            raise ValueError(_error_msg)
         else:
             _error_msg = \
                 f'Module \'{module}\' has no class name ' \
