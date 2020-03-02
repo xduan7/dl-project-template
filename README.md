@@ -147,6 +147,8 @@ use cases for implemented features?
 
 ### PyTorch Extensions
 - [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
+- [fastai](https://docs.fast.ai/): out-of-the-box tools and models for vision, text, and other data
+- [Skorch](https://skorch.readthedocs.io/en/latest/?badge=latest): [Scikit-Learn](https://scikit-learn.org/stable/index.html) interface for PyTorch models
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
