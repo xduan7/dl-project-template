@@ -47,12 +47,11 @@ _lr_scheduler__kwargs: Dict[str, Any] = {
     'step_size': 10,
 }
 
-# TODO: make this constant?
 # dictionary that maps names of each configuration to their object
 # e.g. 'experiment_name': _experiment_name, 'random_state': _random_state, etc.
 # note that the local configuration variable names must start with '_', but
 # the underscores are stripped away in the CONFIG dictionary
-CONFIG: Final[Dict[str, Any]] = {
+config: Final[Dict[str, Any]] = {
     variable_name[1:]: variable
     for variable_name, variable in locals().items() if
     variable_name.startswith('_') and not variable_name.startswith('__')

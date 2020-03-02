@@ -17,10 +17,15 @@ File Description:
 import os
 import logging
 
-# import desired configurations
-from src.configs.example_config import CONFIG
-print(f'using configuration \'{CONFIG["experiment_name"]}\' ...')
-# for other files, simply from src import CONFIG
+# __all__
+# check the following article for organized __init__:
+# https://towardsdatascience.com/whats-init-for-me-d70a312da583
+# import src.configs
+# import src.processes
+# import src.modules
+# import src.optimization
+# import src.utilities
+
 
 # constants (persistent throughout all experiments)
 RAW_DATA_DIR_PATH = os.path.abspath('../data/raw')
@@ -29,6 +34,7 @@ PROCESSED_DATA_DIR_PATH = os.path.abspath('../data/processed')
 LOG_DIR_PATH = os.path.abspath('../logs')
 MODEL_DIR_PATH = os.path.abspath('../models')
 
+
 logging.basicConfig(
     # filename=... (could use config['experiment_name'])
     # format=...
@@ -36,8 +42,3 @@ logging.basicConfig(
     # style=...
     level=logging.DEBUG,
 )
-
-
-# __all__
-# check the following article for organized __init__:
-# https://towardsdatascience.com/whats-init-for-me-d70a312da583

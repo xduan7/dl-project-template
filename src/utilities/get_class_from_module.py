@@ -7,9 +7,10 @@ File Description:
 """
 import logging
 import inspect
-from difflib import get_close_matches
-from types import ModuleType
+
 from typing import Dict
+from types import ModuleType
+from difflib import get_close_matches
 
 
 _LOGGER = logging.getLogger(__name__)
@@ -65,6 +66,7 @@ def get_class_from_module(
             _error_msg = \
                 f'Module \'{module}\' has no class name ' \
                 f'similar to \'{class_name}\'.'
+            print(_class_dict)
             raise AttributeError(_error_msg)
 
     return _class
