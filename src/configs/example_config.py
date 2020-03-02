@@ -42,7 +42,7 @@ _optimizer__kwargs: Dict[str, Any] = {
     'lr': 1e-4,
     'momentum': 0.9,
 }
-_lr_scheduler: str = 'StepLr'
+_lr_scheduler: str = 'StepLR'
 _lr_scheduler__kwargs: Dict[str, Any] = {
     'step_size': 10,
 }

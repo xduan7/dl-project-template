@@ -93,7 +93,6 @@ use cases for implemented features
     - [ ] PyTorch activation function
     - [ ] configurable dense block
     - [x] convolutional residual block
-    - [ ] dense residual block
     - [ ] attention block
 - [x] customizable optimization functions
     - [x] PyTorch optimizer getter
