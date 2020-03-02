@@ -31,8 +31,6 @@ def get_pytorch_lr_scheduler(
     :return: learning rate scheduler of type
     torch.optim.lr_scheduler._LRScheduler
     """
-
-    _lr_scheduler_class: type = get_class_from_module(
-        lr_scheduler,
-        torch.optim.lr_scheduler)
+    _lr_scheduler_class: type = \
+        get_class_from_module(lr_scheduler, torch.optim.lr_scheduler)
     return _lr_scheduler_class(optimizer=optimizer, **lr_scheduler_kwargs)

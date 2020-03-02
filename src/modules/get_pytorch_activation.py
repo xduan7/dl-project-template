@@ -4,13 +4,30 @@ Project:            dl-project-template
 
 File Description:
 
-    Module to inspect: torch.nn.modules.activation
-    TODO: should start by implementing function that does the following:
-
-    get_class_from_module(
-        target_module: module # like torch.nn.modules.activation
-        name_of_class: str # like 'relu'
-    ): -> the target class if there is no ambiguity, otherwise raise exception
-
+    This file implements a function named 'get_pytorch_activation',
+    which returns any PyTorch activation function (as torch.nn.Module
+    instance) with given parameters.
 
 """
+from typing import Dict, Any
+
+import torch
+
+from src.utilities.get_class_from_module import get_class_from_module
+
+
+def get_pytorch_activation(
+        activation: str,
+        activation_kwargs: Dict[str, Any],
+) -> torch.nn.Module:
+    """get a PyTorch learning rate scheduler with a given optimizer and
+    parameters
+
+    :param activation: case-sensitive string for activation function name
+    :param activation_kwargs: dictionary keyword arguments for activation
+    function
+    :return: activation function as an instance of torch.nn.Module
+    """
+    _activation_class: type = \
+        get_class_from_module(activation, torch.nn.modules.activation)
+    return _activation_class(**activation_kwargs)
