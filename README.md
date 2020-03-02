@@ -78,7 +78,7 @@ The project layout with the usage for each folder is shown below:
 
 <!---
 ## Feature Usage
-use cases for implemented features
+use cases for implemented features?
 -->
 
 
@@ -90,21 +90,25 @@ use cases for implemented features
     - [x] debug decorator
     - [x] getter of class from module with target name
 - [ ] customizable neural network modules
-    - [x] PyTorch activation function
+    - [x] PyTorch activation function getter
     - [ ] configurable dense block
     - [x] convolutional residual block
     - [ ] attention block
+    - [ ] transformer block
 - [x] customizable optimization functions
     - [x] PyTorch optimizer getter
     - [x] PyTorch learning rate scheduler getter 
 - [x] minimal setup for hyperparameter optimization
     - [x] configuration file
-- [ ] process flowchart for DL/ML projects (less than 10 steps with deliverables)
 - [x] extra packages for DL/ML projects
 - [ ] documentation
     - [x] getting started
     - [ ] module docstrings
-- [ ] table of content section in readme
+    - [ ] table of content section in readme
+    - [ ] use cases of functions in template
+    - [ ] DL/ML projects process flowchart 
+        - [ ] definition of several major steps
+        - [ ] clarify motivation and deliverables
 
 
 ## Extra Packages
