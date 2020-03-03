@@ -17,6 +17,7 @@ File Description:
         from src.configs.example import config
 
 """
+from types import MappingProxyType
 from typing import Optional, List, Dict, Any, Final
 
 
@@ -47,12 +48,12 @@ _lr_scheduler__kwargs: Dict[str, Any] = {
     'step_size': 10,
 }
 
-# dictionary that maps names of each configuration to their object
+# read-only dictionary that maps names of each configuration to their object
 # e.g. 'experiment_name': _experiment_name, 'random_state': _random_state, etc.
 # note that the local configuration variable names must start with '_', but
 # the underscores are stripped away in the CONFIG dictionary
-config: Final[Dict[str, Any]] = {
+config: MappingProxyType = MappingProxyType({
     variable_name[1:]: variable
     for variable_name, variable in locals().items() if
     variable_name.startswith('_') and not variable_name.startswith('__')
-}
+})
