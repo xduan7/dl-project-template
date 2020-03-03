@@ -114,6 +114,7 @@ use cases for implemented features?
 ## Extra Packages
 ### Data Validation and Cleaning
 - [Great Expectation](https://docs.greatexpectations.io/en/latest/): data validation, documenting, and profiling
+- [Cerberus](http://docs.python-cerberus.org/en/stable/): lightweight data validation functionality
 - [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
 - [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality checking
 
@@ -130,6 +131,7 @@ use cases for implemented features?
 - [DVC](https://dvc.org/): data version control system
 - [Pachyderm](https://www.pachyderm.com/): data pipelining (versioning, lineage/tracking, and parallelization)
 - [d6tflow](https://d6tflow.readthedocs.io/en/latest/): effective data workflow
+- [Metaflow](https://metaflow.org/): end-to-end independent workflow 
 
 ### Visualization and Analysis
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
@@ -148,6 +150,7 @@ use cases for implemented features?
 
 ### PyTorch Extensions
 - [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
+- [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning): lightweight wrapper for less boilerplate
 - [fastai](https://docs.fast.ai/): out-of-the-box tools and models for vision, text, and other data
 - [Skorch](https://skorch.readthedocs.io/en/latest/?badge=latest): [Scikit-Learn](https://scikit-learn.org/stable/index.html) interface for PyTorch models
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
@@ -172,6 +175,7 @@ use cases for implemented features?
 - [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
 
 ### Datasets:
+- [Google Datasets](https://cloud.google.com/public-datasets): high-demand public datasets
 - [Google Dataset Search](https://datasetsearch.research.google.com): a search engine for freely-available online data
 - [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
