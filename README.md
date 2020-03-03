@@ -160,6 +160,7 @@ use cases for implemented features?
 - [learn2learn](http://learn2learn.net/): meta-learning model implementations
 - [higher](https://higher.readthedocs.io/en/latest/): higher-order (unrolled first-order) optimization
 - [Captum](https://captum.ai/): model interpretability and understanding
+- [PyTorch summary](https://github.com/sksq96/pytorch-summary): Keras style summary for PyTorch models
 
 ### Miscellaneous
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
