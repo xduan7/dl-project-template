@@ -153,7 +153,10 @@ use cases for implemented features?
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
-- [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and implementations for few-shot-learning/meta-learning
+- [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and models for few-shot-learning/meta-learning
+- [learn2learn](http://learn2learn.net/): meta-learning model implementations
+- [higher](https://higher.readthedocs.io/en/latest/): higher-order (unrolled first-order) optimization
+- [Captum](https://captum.ai/): model interpretability and understanding
 
 ### Miscellaneous
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
