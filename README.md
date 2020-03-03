@@ -91,10 +91,9 @@ use cases for implemented features?
     - [x] getter of class from module with target name
 - [ ] customizable neural network modules
     - [x] PyTorch activation function getter
-    - [ ] configurable dense block
+    - [x] configurable dense block
     - [x] convolutional residual block
     - [ ] attention block
-    - [ ] transformer block
 - [x] customizable optimization functions
     - [x] PyTorch optimizer getter
     - [x] PyTorch learning rate scheduler getter 

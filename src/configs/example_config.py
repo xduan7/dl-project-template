@@ -18,7 +18,7 @@ File Description:
 
 """
 from types import MappingProxyType
-from typing import Optional, List, Dict, Any, Final
+from typing import Optional, List, Dict, Any
 
 
 # experiment name associated with this set of configurations
@@ -36,6 +36,11 @@ _preferred_gpu_list: Optional[List[int]] = [0, 1]
 
 # flag for using multiple GPUs (nn.DataParallel) for this experiment
 _multi_gpu_flag: bool = False
+
+# network configurations
+_linear_block_layer_dims: List[int] = [1024, 512, 256]
+_linear_block_activation: str = 'ReLU'
+_linear_block_batch_norm: bool = False
 
 # optimizer configurations
 _optimizer: str = 'SGD'
