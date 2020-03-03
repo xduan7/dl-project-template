@@ -9,7 +9,7 @@ File Description:
     instance) with given parameters.
 
 """
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 import torch
 
@@ -18,7 +18,7 @@ from src.utilities.get_class_from_module import get_class_from_module
 
 def get_pytorch_activation(
         activation: str,
-        activation_kwargs: Dict[str, Any],
+        activation_kwargs: Optional[Dict[str, Any]],
 ) -> torch.nn.Module:
     """get a PyTorch learning rate scheduler with a given optimizer and
     parameters
@@ -30,4 +30,4 @@ def get_pytorch_activation(
     """
     _activation_class: type = \
         get_class_from_module(activation, torch.nn.modules.activation)
-    return _activation_class(**activation_kwargs)
+    return _activation_class(**activation_kwargs if activation_kwargs else {})

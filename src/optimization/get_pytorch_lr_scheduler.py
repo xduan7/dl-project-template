@@ -8,7 +8,7 @@ File Description:
     which returns any PyTorch learning rate scheduler with given parameters.
 
 """
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 import torch
 
@@ -33,4 +33,7 @@ def get_pytorch_lr_scheduler(
     """
     _lr_scheduler_class: type = \
         get_class_from_module(lr_scheduler, torch.optim.lr_scheduler)
-    return _lr_scheduler_class(optimizer=optimizer, **lr_scheduler_kwargs)
+    return _lr_scheduler_class(
+        optimizer=optimizer,
+        **lr_scheduler_kwargs if lr_scheduler_kwargs else {},
+    )
