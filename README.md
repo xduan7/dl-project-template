@@ -163,6 +163,7 @@ use cases for implemented features?
 
 ### Miscellaneous
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
+- [NetworkX](https://networkx.github.io/documentation/stable/): creation, manipulation, and study of complex networks/graphs
 
 
 ## Resources
