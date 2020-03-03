@@ -71,6 +71,11 @@ class ResidualBlock(nn.Module):
             _conv2d_3x3(out_channels, out_channels, stride=1),
             nn.BatchNorm2d(out_channels),
         )
+        # the original implementation in one of the references uses in-place
+        # activation functions. However, it is not advised or at least
+        # should be used with great caution
+        # reference: https://pytorch.org/docs/stable/notes/autograd.html
+        # #in-place-operations-with-autograd
         self._activation = nn.ReLU()
 
         # requires down-sampling if stride is not 1, or the number of
