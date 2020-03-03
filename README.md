@@ -121,7 +121,8 @@ use cases for implemented features?
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
 - [Dask](https://dask.org/): parallel computing library
 - [Ray](https://ray.io/): framework for distributed applications
-- [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/) 
+- [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/)
+- [Vaex](https://vaex.readthedocs.io/en/latest/index.html) lazy memory-mapping dataframe for big data
 - [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
 - [RAPIDS](https://rapids.ai/): GPU acceleration for data science
 
