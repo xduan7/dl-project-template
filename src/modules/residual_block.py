@@ -64,14 +64,14 @@ class ResidualBlock(nn.Module):
 
         super(ResidualBlock, self).__init__()
 
-        self._activation = nn.ReLU(inplace=True)
         self._res_layers = nn.Sequential(
             _conv2d_3x3(in_channels, out_channels, stride=stride),
             nn.BatchNorm2d(out_channels),
-            self._activation,
+            nn.ReLU(),
             _conv2d_3x3(out_channels, out_channels, stride=1),
             nn.BatchNorm2d(out_channels),
         )
+        self._activation = nn.ReLU()
 
         # requires down-sampling if stride is not 1, or the number of
         # in-channels and out-channels do not align
