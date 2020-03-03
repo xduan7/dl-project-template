@@ -122,7 +122,7 @@ use cases for implemented features?
 - [Dask](https://dask.org/): parallel computing library
 - [Ray](https://ray.io/): framework for distributed applications
 - [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/)
-- [Vaex](https://vaex.readthedocs.io/en/latest/index.html) lazy memory-mapping dataframe for big data
+- [Vaex](https://vaex.readthedocs.io/en/latest/index.html): lazy memory-mapping dataframe for big data
 - [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
 - [RAPIDS](https://rapids.ai/): GPU acceleration for data science
 
@@ -153,6 +153,7 @@ use cases for implemented features?
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
+- [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and implementations for few-shot-learning/meta-learning
 
 ### Miscellaneous
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
