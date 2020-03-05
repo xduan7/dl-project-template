@@ -29,7 +29,7 @@ import logging
 
 # constants (persistent throughout all experiments)
 RAW_DATA_DIR_PATH = os.path.abspath('../data/raw')
-ITERM_DATA_DIR_PATH = os.path.abspath('../data/interm')
+ITERM_DATA_DIR_PATH = os.path.abspath('../data/interim')
 PROCESSED_DATA_DIR_PATH = os.path.abspath('../data/processed')
 LOG_DIR_PATH = os.path.abspath('../logs')
 MODEL_DIR_PATH = os.path.abspath('../models')

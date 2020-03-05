@@ -74,9 +74,8 @@ The project layout with the usage for each folder is shown below:
 ├── ...                 # project config (requirements, license, etc.)
 ├── data
 |   ├── ...             # data indexes and other descriptor files
-│   ├── raw             # downloaded and untreated data
-│   ├── cached          # cached files during processing
-│   ├── interm          # intermediate results during processing
+│   ├── raw             # directly downloaded and untreated data
+│   ├── interim         # intermediate results during processing
 │   └── processed       # processed data (features, targets) ready for learning
 ├── docs                # documentations (txt, doc, jpeg, etc.)
 ├── logs                # logs generated from programs
