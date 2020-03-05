@@ -4,9 +4,26 @@ The template assumes [PyTorch](https://pytorch.org/) as the deep learning framew
 However, one can easily transfer and utilize the template to any project implemented with other frameworks.
 
 
-<!---
-a table of content section might be a good idea
--->
+## Table of Contents  
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+- [Template Layout](#template-layout)
+- [Extra Packages](#extra-packages)
+    - [Data Validation and Cleaning](#data-validation-and-cleaning)
+    - [Performance and Caching](#performance-and-caching)
+    - [Data Version Control and Workflow](#data-version-control-and-workflow)
+    - [Visualization and Analysis](#visualization-and-analysis)
+    - [Project Lifecycles and Hyperparameter Optimization](#project-lifecycles-and-hyperparameter-optimization)
+    - [PyTorch Extensions](#pytorch-extensions)
+    - [Miscellaneous](#miscellaneous)
+- [Resources](#resources)
+    - [Datasets](#datasets)
+    - [Readings](#readings)
+    - [Other ML/DL Templates](#other-mldl-templates)
+- [Future Tasks](#future-tasks)
+- [Authors](#authors)
+- [License](#license)
+
 
 ## Dependencies
 ```text
@@ -76,40 +93,6 @@ The project layout with the usage for each folder is shown below:
 ```
 
 
-<!---
-## Feature Usage
-use cases for implemented features?
--->
-
-
-## Future Tasks
-- [x] python environment setup (pyproject.toml, makefile, etc.)
-- [x] commonly-used utility functions
-    - [x] random seeding (for Numpy, PyTorch, etc.)
-    - [x] gpu/cpu specification
-    - [x] debug decorator
-    - [x] getter of class from module with target name
-- [ ] customizable neural network modules
-    - [x] PyTorch activation function getter
-    - [x] configurable dense block
-    - [x] convolutional residual block
-    - [ ] attention block
-- [x] customizable optimization functions
-    - [x] PyTorch optimizer getter
-    - [x] PyTorch learning rate scheduler getter 
-- [x] minimal setup for hyperparameter optimization
-    - [x] configuration file
-- [x] extra packages for DL/ML projects
-- [ ] documentation
-    - [x] getting started
-    - [ ] module docstrings
-    - [ ] table of content section in readme
-    - [ ] use cases of functions in template
-    - [ ] DL/ML projects process flowchart 
-        - [ ] definition of several major steps
-        - [ ] clarify motivation and deliverables
-
-
 ## Extra Packages
 ### Data Validation and Cleaning
 - [Great Expectation](https://docs.greatexpectations.io/en/latest/): data validation, documenting, and profiling
@@ -167,19 +150,46 @@ use cases for implemented features?
 
 
 ## Resources
-### Readings:
-- [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
-- [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) by Martin Zinkevich
- 
-### Other Machine Learning Template Repos:
-- [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): a logical, reasonably standardized, but flexible project structure
-- [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
-
 ### Datasets:
 - [Google Datasets](https://cloud.google.com/public-datasets): high-demand public datasets
 - [Google Dataset Search](https://datasetsearch.research.google.com): a search engine for freely-available online data
 - [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
+
+### Readings:
+- [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
+- [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) by Martin Zinkevich
+ 
+### Other ML/DL Templates:
+- [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): a logical, reasonably standardized, but flexible project structure
+- [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
+
+
+## Future Tasks
+- [x] python environment setup (pyproject.toml, makefile, etc.)
+- [x] commonly-used utility functions
+    - [x] random seeding (for Numpy, PyTorch, etc.)
+    - [x] gpu/cpu specification
+    - [x] debug decorator
+    - [x] getter of class from module with target name
+- [x] customizable neural network modules
+    - [x] PyTorch activation function getter
+    - [x] configurable dense block
+    - [x] convolutional residual block
+- [x] customizable optimization functions
+    - [x] PyTorch optimizer getter
+    - [x] PyTorch learning rate scheduler getter 
+- [x] minimal setup for hyperparameter optimization
+    - [x] configuration file
+- [x] extra packages for ML/DL projects
+- [x] documentation
+    - [x] getting started
+    - [x] module docstrings
+    - [x] table of content section in readme
+    - [ ] ML/DL projects process flowchart 
+        - [ ] definition of several major steps
+        - [ ] clarify motivation and deliverables
+- [ ] small example for demonstration (omniglot?)
 
 
 ## Authors
