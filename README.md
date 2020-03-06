@@ -135,6 +135,7 @@ The project layout with the usage for each folder is shown below:
 - [fastai](https://docs.fast.ai/): out-of-the-box tools and models for vision, text, and other data
 - [Skorch](https://skorch.readthedocs.io/en/latest/?badge=latest): [Scikit-Learn](https://scikit-learn.org/stable/index.html) interface for PyTorch models
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
+- [Kornia](https://kornia.org/): differentiable computer vision library
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
 - [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and models for few-shot-learning/meta-learning
