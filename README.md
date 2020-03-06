@@ -38,6 +38,7 @@ optional:
     poetry>=0.12
     flake8>=3.7
     pylint>=2.4
+    mypy>=0.76
     GPUtil>=1.4
 ```
 
