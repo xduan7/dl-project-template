@@ -8,18 +8,20 @@ File Description:
     which returns any PyTorch learning rate scheduler with given parameters.
 
 """
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Type
 
 import torch
+from torch.optim.optimizer import Optimizer
+from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
 from src.utilities.get_class_from_module import get_class_from_module
 
 
 def get_pytorch_lr_scheduler(
         lr_scheduler: str,
-        optimizer: torch.optim.Optimizer,
+        optimizer: Optimizer,
         lr_scheduler_kwargs: Dict[str, Any],
-) -> Any:
+) -> LRScheduler:
     """get a PyTorch learning rate scheduler with a given optimizer and
     parameters
 
@@ -28,10 +30,9 @@ def get_pytorch_lr_scheduler(
     :param optimizer: PyTorch optimizer for learning rate scheduling
     :param lr_scheduler_kwargs: dictionary keyword arguments for scheduler
     hyper-parameters
-    :return: learning rate scheduler of type
-    torch.optim.lr_scheduler._LRScheduler
+    :return: learning rate scheduler of type LRScheduler
     """
-    _lr_scheduler_class: type = \
+    _lr_scheduler_class: Type[LRScheduler] = \
         get_class_from_module(lr_scheduler, torch.optim.lr_scheduler)
     return _lr_scheduler_class(
         optimizer=optimizer,

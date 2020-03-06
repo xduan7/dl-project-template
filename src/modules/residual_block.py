@@ -14,6 +14,8 @@ File Description:
     /resnet.py
 
 """
+from typing import Optional
+
 import torch
 import torch.nn as nn
 
@@ -80,6 +82,7 @@ class ResidualBlock(nn.Module):
 
         # requires down-sampling if stride is not 1, or the number of
         # in-channels and out-channels do not align
+        self._residual_down_sample: Optional[nn.Module]
         if (stride != 1) or (in_channels != out_channels):
             self._residual_down_sample = nn.Sequential(
                 _conv2d_3x3(

@@ -68,9 +68,9 @@ class LinearBlock(nn.Module):
         # warning if dropout and normalization are both present
         if (dropout_rate > 0.0) and batch_norm:
             _warning_msg = \
-                f'Using batch-normalization with dropout is not recommended. ' \
-                f'Check the link: https://arxiv.org/abs/1801.05134 for more ' \
-                f'details.'
+                f'Using batch-normalization with dropout is not ' \
+                f'recommended. Check the link: ' \
+                f'https://arxiv.org/abs/1801.05134 for more details.'
             _LOGGER.warning(_warning_msg)
 
         _layer_list = nn.ModuleList([])
@@ -91,4 +91,4 @@ class LinearBlock(nn.Module):
             self,
             x: torch.Tensor,
     ) -> torch.Tensor:
-        self._layers(x)
+        return self._layers(x)

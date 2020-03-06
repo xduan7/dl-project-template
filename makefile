@@ -8,13 +8,15 @@ help:
 	@echo "    download:   download dataset into ./data/raw"
 	@echo "    train:      train model with given config file"
 	@echo "    test:       test trained model on test dataset"
-	@echo "    check:      perform flake8 and pylint checking for python files"
+	@echo "    mypy:       perform typing checking for python file"
+	@echo "    lint:       perform style checking for python file"
+	@echo "    check:      perform typing and style checking for python files"
 	@echo "    clean:      remove all temporary/cached data files"
 # TODO: add more help instructions here
 
 install:
 	@echo "installing dependencies with poetry ..."
-	poetry install
+	@poetry install
 
 download:
 	@echo "downloading ... "
@@ -28,12 +30,20 @@ test:
 	@echo "testing ..."
 # TODO: test some saved model on holdout set
 
-check:
-	@echo "checking source code with flake8 ...."
+mypy:
+	@echo "checking source code typing with mypy ...."
+	@mypy src --config-file mypy.ini  || true
+
+lint:
+	@echo "checking source code style with flake8 ...."
 	@flake8 src || true
-	@echo "checking source code with pylint ...."
-	@pylint src/**/*.py --generated-members=torch.* || true
+	@echo "checking source code style with pylint ...."
+	@pylint src || true
+
+check:
+	@$(MAKE) mypy
+	@$(MAKE) lint
 
 clean:
 	@echo "cleaning up the cached data directory ...."
-	find data/cached/ -type f ! -name '.gitignore' -delete
+	@find data/cached/ -type f ! -name '.gitignore' -delete

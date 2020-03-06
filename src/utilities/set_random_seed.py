@@ -40,8 +40,9 @@ def set_random_seed(
     # https://pytorch.org/docs/stable/notes/randomness.html#cudnn
     if torch.cuda.is_available() and deterministic_cudnn_flag:
         try:
-            torch.backends.cudnn.deterministic = True
-            torch.backends.cudnn.benchmark = False
+            _cudnn = torch.backends.cudnn
+            _cudnn.deterministic = True
+            _cudnn.benchmark = False
         except Exception:
             _LOGGER.warning(
                 'Failed to configure CuDNN for deterministic computation '

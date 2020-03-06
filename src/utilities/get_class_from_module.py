@@ -50,12 +50,13 @@ def get_class_from_module(
         _close_match_names = \
             get_close_matches(class_name, _class_dict.keys())
         if len(_close_match_names) == 1:
+            _close_match_name = str(_close_match_names[0])
             _warning_msg = \
-                f'Do you mean to use class \'{_close_match_names[0]}\' ' \
+                f'Do you mean to use class \'{_close_match_name}\' ' \
                 f'instead of \'{class_name}\' from module \'{module}\'? ' \
-                f'Continuing with \'{_close_match_names[0]}\' class ...'
+                f'Continuing with \'{_close_match_name}\' class ...'
             _LOGGER.warning(_warning_msg)
-            _class = _class_dict[_close_match_names[0]]
+            _class = _class_dict[_close_match_name]
         elif len(_close_match_names) > 1:
             _error_msg = \
                 f'Ambiguity with class name \'{class_name}\' . Please pick ' \

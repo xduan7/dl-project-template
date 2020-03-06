@@ -19,7 +19,7 @@ from src.utilities.get_class_from_module import get_class_from_module
 def get_pytorch_activation(
         activation: str,
         activation_kwargs: Optional[Dict[str, Any]],
-) -> torch.nn.Module:
+) -> Any:
     """get a PyTorch learning rate scheduler with a given optimizer and
     parameters
 
