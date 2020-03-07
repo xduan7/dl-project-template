@@ -129,10 +129,12 @@ The project layout with the usage for each folder is shown below:
 - [MLflow](https://mlflow.org/): platform for ML lifecycle , including experimentation, reproducibility and deployment
 - [Optuna](https://optuna.org/): automatic hyperparameter optimization framework
 - [Hyperopt](http://hyperopt.github.io/hyperopt): serial and parallel optimization
+- [Tune](https://ray.readthedocs.io/en/latest/tune.html): scalable experiment execution and hyperparameter tuning
 
 ### PyTorch Extensions
 - [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
 - [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning): lightweight wrapper for less boilerplate
+- [RaySGD](https://ray.readthedocs.io/en/latest/raysgd/raysgd.html): lightweight wrappers for distributed deep learning
 - [fastai](https://docs.fast.ai/): out-of-the-box tools and models for vision, text, and other data
 - [Skorch](https://skorch.readthedocs.io/en/latest/?badge=latest): [Scikit-Learn](https://scikit-learn.org/stable/index.html) interface for PyTorch models
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch

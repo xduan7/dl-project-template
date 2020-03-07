@@ -216,8 +216,9 @@ dmypy.json
 
 ### User defined ignores
 data/raw/*
-data/cached/*
+data/interim/*
 data/processed/*
 .idea/
+.mypy_cache
 **/.DS_Store
 poetry.lock
