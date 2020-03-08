@@ -177,6 +177,8 @@ The project layout with the usage for each folder is shown below:
     - [x] gpu/cpu specification
     - [x] debug decorator
     - [x] getter of class from module with target name
+    - [ ] getter of function from module with target name
+    - [ ] sklearn evaluator
 - [x] customizable neural network modules
     - [x] PyTorch activation function getter
     - [x] configurable dense block
