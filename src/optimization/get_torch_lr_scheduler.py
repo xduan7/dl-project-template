@@ -14,10 +14,10 @@ import torch
 from torch.optim.optimizer import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
-from src.utilities.get_class_from_module import get_class_from_module
+from src.utilities.get_object_from_module import get_class_from_module
 
 
-def get_pytorch_lr_scheduler(
+def get_torch_lr_scheduler(
         lr_scheduler: str,
         optimizer: Optimizer,
         lr_scheduler_kwargs: Dict[str, Any],

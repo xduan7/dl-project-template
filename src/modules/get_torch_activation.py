@@ -13,10 +13,10 @@ from typing import Dict, Any, Optional
 
 import torch
 
-from src.utilities.get_class_from_module import get_class_from_module
+from src.utilities.get_object_from_module import get_class_from_module
 
 
-def get_pytorch_activation(
+def get_torch_activation(
         activation: str,
         activation_kwargs: Optional[Dict[str, Any]],
 ) -> Any:

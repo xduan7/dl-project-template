@@ -13,10 +13,10 @@ from typing import Dict, Iterable, Type, Any, Optional
 import torch
 from torch.optim.optimizer import Optimizer
 
-from src.utilities.get_class_from_module import get_class_from_module
+from src.utilities.get_object_from_module import get_class_from_module
 
 
-def get_pytorch_optimizer(
+def get_torch_optimizer(
         optimizer: str,
         parameters: Iterable,
         optimizer_kwargs: Optional[Dict[str, Any]],
