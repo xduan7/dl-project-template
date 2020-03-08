@@ -17,15 +17,18 @@ File Description:
 import os
 import logging
 
-# __all__
 # check the following article for organized __init__:
 # https://towardsdatascience.com/whats-init-for-me-d70a312da583
-# import src.configs
-# import src.processes
-# import src.modules
-# import src.optimization
-# import src.utilities
-
+# from src import *
+# __all__ = [
+#     'configs',
+#     'modules',
+#     'optimization',
+#     'processes',
+#     'utilities',
+# ]
+# note that this naming scheme might be misleading as the generic names like
+# 'modules' and 'utilities' should not be used without any parent package
 
 # constants (persistent throughout all experiments)
 RAW_DATA_DIR_PATH = os.path.abspath('../data/raw')
