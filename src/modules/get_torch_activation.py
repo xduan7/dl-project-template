@@ -13,7 +13,7 @@ from typing import Dict, Any, Optional
 
 import torch
 
-from src.utilities.get_object_from_module import get_class_from_module
+from src.utilities import get_class_from_module, get_valid_kwargs
 
 
 def get_torch_activation(
@@ -30,4 +30,11 @@ def get_torch_activation(
     """
     _activation_class: type = \
         get_class_from_module(activation, torch.nn.modules.activation)
-    return _activation_class(**activation_kwargs if activation_kwargs else {})
+
+    _valid_activation_kwargs: Dict[str, Any] = \
+        get_valid_kwargs(
+            func=_activation_class.__init__,
+            kwargs=activation_kwargs,
+        )
+
+    return _activation_class(**_valid_activation_kwargs)

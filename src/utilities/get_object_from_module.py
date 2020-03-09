@@ -50,24 +50,27 @@ def get_object_from_module(
     else:
         _close_match_names = \
             get_close_matches(object_name, _object_dict.keys())
+        _module_name: str = module.__name__
+
         if len(_close_match_names) == 1:
             _close_match_name = str(_close_match_names[0])
             _warning_msg = \
                 f'Do you mean to use object \'{_close_match_name}\' ' \
-                f'instead of \'{object_name}\' from module \'{module}\'? ' \
-                f'Continuing with object \'{_close_match_name}\' ...'
+                f'instead of \'{object_name}\' from module ' \
+                f'\'{_module_name}\'? Continuing with object ' \
+                f'\'{_close_match_name}\' ...'
             _LOGGER.warning(_warning_msg)
             _object = _object_dict[_close_match_name]
         elif len(_close_match_names) > 1:
             _error_msg = \
                 f'Ambiguity with object name \'{object_name}\' . ' \
                 f'Please pick from any of these objects from module ' \
-                f'\'{module}\': {_close_match_names}'
+                f'\'{_module_name}\': {_close_match_names}'
             raise ValueError(_error_msg)
         else:
             _error_msg = \
-                f'Module \'{module}\' has no object with name similar to ' \
-                f'\'{object_name}\'.'
+                f'Module \'{_module_name}\' has no object with name ' \
+                f'similar to \'{object_name}\'.'
             raise ValueError(_error_msg)
 
     return _object

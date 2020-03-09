@@ -14,7 +14,7 @@ import torch
 from torch.optim.optimizer import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
-from src.utilities.get_object_from_module import get_class_from_module
+from src.utilities import get_class_from_module, get_valid_kwargs
 
 
 def get_torch_lr_scheduler(
@@ -34,7 +34,14 @@ def get_torch_lr_scheduler(
     """
     _lr_scheduler_class: Type[LRScheduler] = \
         get_class_from_module(lr_scheduler, torch.optim.lr_scheduler)
+
+    _valid_lr_scheduler_kwargs: Dict[str, Any] = \
+        get_valid_kwargs(
+            func=_lr_scheduler_class.__init__,
+            kwargs=lr_scheduler_kwargs,
+        )
+
     return _lr_scheduler_class(
         optimizer=optimizer,
-        **lr_scheduler_kwargs if lr_scheduler_kwargs else {},
+        **_valid_lr_scheduler_kwargs,
     )

@@ -11,7 +11,7 @@ from typing import List, Dict, Any, Optional
 import torch
 import torch.nn as nn
 
-from src.modules.get_torch_activation import get_torch_activation
+from src.modules import get_torch_activation
 
 
 _LOGGER = logging.getLogger(__name__)
