@@ -8,21 +8,18 @@ File Description:
     which returns any PyTorch optimizer with given parameters.
 
 """
-from inspect import isclass
-from typing import Dict, Iterable, Type, List, Any, Optional
+from typing import Dict, Iterable, Type, Any, Optional
 
 import torch
 from torch.optim.optimizer import Optimizer
 
-from src.utilities import get_class_from_module, get_valid_kwargs
+from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
 
 
 def is_torch_optimizer_class(
         optimizer_class: Any,
 ) -> bool:
-    return isclass(optimizer_class) \
-           and issubclass(optimizer_class, Optimizer) \
-           and (optimizer_class != Optimizer)
+    return is_subclass(optimizer_class, Optimizer)
 
 
 def get_torch_optimizer(

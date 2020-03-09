@@ -8,7 +8,7 @@ File Description:
 import logging
 import inspect
 
-from typing import Dict, Optional, Callable, Any
+from typing import Dict, Optional, Callable, Any, Type
 from types import ModuleType
 from difflib import get_close_matches
 
@@ -79,7 +79,7 @@ def get_object_from_module(
 def get_class_from_module(
         class_name: str,
         module: ModuleType,
-) -> type:
+) -> Type:
     """get an class from a module with given name
 
     Please refer to the function 'src.utilities.get_object_from_module' for
@@ -91,7 +91,7 @@ def get_class_from_module(
     without ambiguity) any classes in the module
     """
 
-    _class: type = get_object_from_module(
+    _class: Type = get_object_from_module(
         object_name=class_name,
         module=module,
         predicate=inspect.isclass,

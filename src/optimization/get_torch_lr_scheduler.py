@@ -8,22 +8,19 @@ File Description:
     which returns any PyTorch learning rate scheduler with given parameters.
 
 """
-from inspect import isclass
 from typing import Dict, Any, Type
 
 import torch
 from torch.optim.optimizer import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
-from src.utilities import get_class_from_module, get_valid_kwargs
+from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
 
 
 def is_torch_lr_scheduler_class(
         lr_scheduler_class: Any,
 ) -> bool:
-    return isclass(lr_scheduler_class) \
-           and issubclass(lr_scheduler_class, LRScheduler) \
-           and (lr_scheduler_class != LRScheduler)
+    return is_subclass(lr_scheduler_class, LRScheduler)
 
 
 def get_torch_lr_scheduler(
