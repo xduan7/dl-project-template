@@ -169,9 +169,10 @@ The project layout with the usage for each folder is shown below:
 
 
 ## Future Tasks
-- [x] python environment setup (pyproject.toml, makefile, etc.)
+- [ ] python environment setup (pyproject.toml, makefile, etc.)
     - [x] linting with pylint and flank8
     - [x] static type checking with mypy
+    - [ ] unittest setup
 - [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
