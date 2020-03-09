@@ -23,15 +23,36 @@ _OPTIMIZER: Optimizer = get_torch_optimizer(
     optimizer_kwargs={'lr': 1e-4},
 )
 
+
+def _lr_scheduler_predicate(_obj: Any) -> bool:
+    return inspect.isclass(_obj) and issubclass(_obj, LRScheduler)
+
+
 _EXACT_LR_SCHEDULERS: List[str] = [
     _name for _name, _class in
-    inspect.getmembers(torch.optim.lr_scheduler, inspect.isclass)
+    inspect.getmembers(torch.optim.lr_scheduler, _lr_scheduler_predicate)
 ]
-_FUZZY_LR_SCHEDULERS: List[str] = ['StepR', ]
+_FUZZY_LR_SCHEDULERS: List[str] = ['SteplR', ]
 _TEST_LR_SCHEDULERS: List[str] = _EXACT_LR_SCHEDULERS + _FUZZY_LR_SCHEDULERS
 _LR_SCHEDULER_KWARGS: Dict[str, Any] = {
-    # positional argument for StepLR
+    # argument for StepLR
     'step_size': 10,
+    # arguments for CosineAnnealingLR
+    'T_max': 128,
+    # arguments for CosineAnnealingWarmRestarts
+    'T_0': 8,
+    # arguments for CyclicLR
+    'base_lr': 1e-4,
+    'max_lr': 1e-3,
+    # arguments for ExponentialLR
+    'gamma': 0.5,
+    # arguments for LambdaLR
+    'lr_lambda': lambda _lr: _lr * 0.5,
+    # arguments for MultiStepLR
+    'milestones': [2**_e for _e in range(4)],
+    # arguments for OneCycleLR
+    'max_lr': 1e-2,
+    'total_steps': 128,
 }
 
 
@@ -43,13 +64,14 @@ class TestGetTorchLRScheduler(unittest.TestCase):
         }
 
         for _lr_scheduler in _TEST_LR_SCHEDULERS:
-            assert isinstance(
-                get_torch_lr_scheduler(
-                    lr_scheduler=_lr_scheduler,
-                    **_lr_scheduler_kwargs,
-                ),
-                LRScheduler,
-            )
+            if _lr_scheduler != '_LRScheduler':
+                assert isinstance(
+                    get_torch_lr_scheduler(
+                        lr_scheduler=_lr_scheduler,
+                        **_lr_scheduler_kwargs,
+                    ),
+                    LRScheduler,
+                )
 
 
 if __name__ == '__main__':
