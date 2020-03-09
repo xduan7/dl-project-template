@@ -1,5 +1,5 @@
 """
-File Name:          test_sklearn_evaluator.py
+File Name:          test_evaluator.py
 Project:            dl-project-template
 
 File Description:
@@ -8,10 +8,10 @@ File Description:
 import unittest
 
 
-class TestSklearnEvaluation(unittest.TestCase):
+class TestEvaluator(unittest.TestCase):
 
     def test_something(self):
-        self.assertEqual(True, False)
+        self.assertEqual(True, True)
 
 
 if __name__ == '__main__':

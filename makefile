@@ -6,8 +6,9 @@ help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "    install:    install dependencies (require poetry)"
 	@echo "    download:   download dataset into ./data/raw"
-	@echo "    train:      train model with given config file"
-	@echo "    test:       test trained model on test dataset"
+	@echo "    train:      train a model with given config file"
+	@echo "    test:       test a model on holdout dataset"
+	@echo "    unittest:   unittest all cases implemented in ./src/tests"
 	@echo "    mypy:       perform typing checking for python file"
 	@echo "    lint:       perform style checking for python file"
 	@echo "    check:      perform typing and style checking for python files"
@@ -28,7 +29,11 @@ train:
 
 test:
 	@echo "testing ..."
-# TODO: test some saved model on holdout set
+# TODO: train with certain config file
+
+unittest:
+	@echo "unit testing ..."
+	@python -m unittest src.tests
 
 mypy:
 	@echo "checking source code typing with mypy ...."
