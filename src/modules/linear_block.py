@@ -11,7 +11,7 @@ from typing import List, Dict, Any, Optional
 import torch
 import torch.nn as nn
 
-from src.modules.get_pytorch_activation import get_pytorch_activation
+from src.modules.get_torch_activation import get_torch_activation
 
 
 _LOGGER = logging.getLogger(__name__)
@@ -80,7 +80,7 @@ class LinearBlock(nn.Module):
             # ordering: batch-normalization -> activation -> dropout
             if batch_norm:
                 _layer_list.append(nn.BatchNorm1d(num_features=_out_dim))
-            _layer_list.append(get_pytorch_activation(
+            _layer_list.append(get_torch_activation(
                 activation, activation_kwargs))
             if dropout_rate > 0.0:
                 _layer_list.append(nn.Dropout(dropout_rate))
