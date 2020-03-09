@@ -8,13 +8,21 @@ File Description:
     which returns any PyTorch optimizer with given parameters.
 
 """
-from inspect import getfullargspec
+from inspect import isclass
 from typing import Dict, Iterable, Type, List, Any, Optional
 
 import torch
 from torch.optim.optimizer import Optimizer
 
 from src.utilities import get_class_from_module, get_valid_kwargs
+
+
+def is_torch_optimizer_class(
+        optimizer_class: Any,
+) -> bool:
+    return isclass(optimizer_class) \
+           and issubclass(optimizer_class, Optimizer) \
+           and (optimizer_class != Optimizer)
 
 
 def get_torch_optimizer(
@@ -32,6 +40,8 @@ def get_torch_optimizer(
     """
     _optimizer_class: Type[Optimizer] = \
         get_class_from_module(optimizer, torch.optim)
+
+    assert is_torch_optimizer_class(_optimizer_class)
 
     _valid_optimizer_kwargs: Dict[str, Any] = \
         get_valid_kwargs(
