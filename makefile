@@ -8,7 +8,7 @@ help:
 	@echo "    download:   download dataset into ./data/raw"
 	@echo "    train:      train a model with given config file"
 	@echo "    test:       test a model on holdout dataset"
-	@echo "    unittest:   unittest all cases implemented in ./src/tests"
+	@echo "    pytest:     unit test all cases implemented in ./src/tests"
 	@echo "    mypy:       perform typing checking for python file"
 	@echo "    lint:       perform style checking for python file"
 	@echo "    check:      perform typing and style checking for python files"
@@ -31,9 +31,9 @@ test:
 	@echo "testing ..."
 # TODO: train with certain config file
 
-unittest:
+pytest:
 	@echo "unit testing ..."
-	@python -m unittest src.tests
+	@pytest || true
 
 mypy:
 	@echo "checking source code typing with mypy ...."

@@ -220,5 +220,6 @@ data/interim/*
 data/processed/*
 .idea/
 .mypy_cache
+.pytest_cache
 **/.DS_Store
 poetry.lock
