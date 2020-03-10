@@ -1,4 +1,3 @@
-from .test_evaluator import TestEvaluator
 from .test_get_torch_optimizer import TestGetTorchOptimizer
 from .test_get_torch_lr_scheduler import TestGetTorchLRScheduler
 from .test_set_random_seed import TestSetRandomSeed

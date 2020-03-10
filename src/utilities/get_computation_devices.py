@@ -12,6 +12,7 @@ import logging
 from typing import Optional, List
 
 import torch
+from torch import device as Device
 try:
     from GPUtil import getAvailable
 except (ImportError, ModuleNotFoundError):
@@ -30,7 +31,7 @@ _LOGGER = logging.getLogger(__name__)
 def get_computation_devices(
         preferred_gpu_list: Optional[List[int]],
         multi_gpu_flag: bool,
-) -> List[torch.device]:
+) -> List[Device]:
     """get the available computation devices (CPU & GPUs)
 
     Get the computation devices for deep learning experiments with given
@@ -47,7 +48,7 @@ def get_computation_devices(
     if (preferred_gpu_list is None) \
             or (len(preferred_gpu_list) == 0) \
             or (not torch.cuda.is_available()):
-        return [torch.device('cpu'), ]
+        return [Device('cpu'), ]
 
     # else GPUs are preferred and available
     # get all available GPU indexes
@@ -76,8 +77,8 @@ def get_computation_devices(
 
     # use CPU if there is no preferred GPUs that are available
     if len(_gpus) == 0:
-        return [torch.device('cpu'), ]
+        return [Device('cpu'), ]
 
     # otherwise return one or all GPUs depending on the multi-GPU flag
-    return [torch.device(f'cuda:{_g}') for _g in _gpus] \
-        if multi_gpu_flag else [torch.device(f'cuda:{_gpus[0]}'), ]
+    return [Device(f'cuda:{_g}') for _g in _gpus] \
+        if multi_gpu_flag else [Device(f'cuda:{_gpus[0]}'), ]

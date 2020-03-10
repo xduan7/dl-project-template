@@ -83,14 +83,15 @@ The project layout with the usage for each folder is shown below:
 ├── logs                # logs generated from programs
 ├── models              # saved model parameters with optimizer
 ├── notebooks           # jupyter notebooks for experiments and visualization 
-├── src    
-│   ├── ...             # top-level scripts for deep learning
-│   ├── configs         # configurations (*.py) for deep learning experiments
-│   ├── processes       # data processing functions and classes
-│   ├── modules         # layers, modules, and networks
-│   ├── optimization    # optimizers and schedulers
-│   └── utilities       # other useful functions and classes
-└── tests               # tests for data processing and learning loops
+└── src    
+    ├── ...             # top-level scripts for deep learning
+    ├── configs         # configurations (*.py) for deep learning experiments
+    ├── processes       # data processing functions and classes
+    ├── modules         # layers, modules, and networks
+    ├── optimization    # optimizers and schedulers
+    ├── processes       # data processing functions (cleaning, validation, etc.)
+    ├── tests           # tests for processing steps, etc.
+    └── utilities       # other useful functions and classes  
 ```
 
 
@@ -172,17 +173,15 @@ The project layout with the usage for each folder is shown below:
 
 
 ## Future Tasks
-- [ ] python environment setup (pyproject.toml, makefile, etc.)
+- [x] python environment setup (pyproject.toml, makefile, etc.)
     - [x] linting with pylint and flank8
     - [x] static type checking with mypy
-    - [ ] unittest setup
+    - [x] unit test setup with pytest
 - [x] commonly-used utility functions
     - [x] random seeding (for Numpy, PyTorch, etc.)
     - [x] gpu/cpu specification
     - [x] debug decorator
-    - [x] getter of class from module with target name
-    - [ ] getter of function from module with target name
-    - [ ] sklearn evaluator
+    - [x] getter of object (function, class, etc.) from module with target name
 - [x] customizable neural network modules
     - [x] PyTorch activation function getter
     - [x] configurable dense block
