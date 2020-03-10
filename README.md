@@ -151,6 +151,7 @@ The project layout with the usage for each folder is shown below:
 ### Miscellaneous
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
 - [NetworkX](https://networkx.github.io/documentation/stable/): creation, manipulation, and study of complex networks/graphs
+- [Gym](https://gym.openai.com/): toolkit for developing and comparing reinforcement learning algorithms
 
 
 ## Resources
