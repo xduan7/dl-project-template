@@ -1,5 +1,5 @@
 """
-File Name:          sklearn_evaluator.py
+File Name:          evaluator.py
 Project:            dl-project-template
 
 File Description:
@@ -15,7 +15,7 @@ import sklearn
 import numpy as np
 import pandas as pd
 
-from src.utilities import get_function_from_module
+from src.utilities import get_function_from_module, get_valid_kwargs
 
 
 _LOGGER = logging.getLogger(__name__)
@@ -25,11 +25,14 @@ class Evaluator:
 
     def __init__(
             self,
-            metrics: List[str],
+            metrics: Optional[List[str]] = None,
     ):
         self._metrics: Dict[str, Callable] = {}
         self._data: Dict[int, Dict[str, List[float]]] = {}
         self._results: Dict[int, Dict[str, Any]] = {}
+
+        for _metric in metrics:
+            self.add_metric(_metric)
 
     def __str__(self) -> str:
         return str(self.to_dataframe())
@@ -48,7 +51,7 @@ class Evaluator:
     def add_metric(
             self,
             metric: Union[str, Callable],
-            metric_kwargs: Optional[Dict[str, Any]],
+            metric_kwargs: Optional[Dict[str, Any]] = None,
     ):
         _func: Callable = \
             get_function_from_module(metric, sklearn.metrics) \
@@ -100,7 +103,8 @@ class Evaluator:
 
         for _data_key, _pt_tensor in data.items():
             _np_array: np.ndarray = _pt_tensor.detach().cpu().numpy()
-            _data_list = _np_array.reshape((-1)).astype(float).tolist()
+            # use list of np.arrays for faster extend
+            _data_list = list(_np_array)
             if _data_key in self._data[epoch]:
                 self._data[epoch][_data_key].extend(_data_list)
             else:
@@ -117,22 +121,15 @@ class Evaluator:
             return
 
         _metric_func: Callable = self._metrics[metric_name]
-        _metric_func_args: Set[str] = \
-            set(inspect.getfullargspec(_metric_func).args)
-
-        _kwargs = {
-            _data_key: _data_list
-            for _data_key, _data_list in self._data[epoch].items()
-            if _data_key in _metric_func_args
-        }
+        _valid_kwargs = \
+            get_valid_kwargs(func=_metric_func, kwargs=self._data[epoch])
 
         try:
-            self._results[epoch][metric_name] = _metric_func(**_kwargs)
+            self._results[epoch][metric_name] = _metric_func(**_valid_kwargs)
         except Exception as _exception:
-            _exception_str = str(_exception)
             _error_msg = \
                 f'Encountered error when calculating metric {metric_name} ' \
-                f'for epoch {epoch}. Exception message\n: {_exception_str}'
+                f'for epoch {epoch}. Exception message\n: {str(_exception)}'
             _LOGGER.error(_error_msg)
             self._results[epoch][metric_name] = np.NaN
 
