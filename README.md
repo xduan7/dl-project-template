@@ -120,6 +120,7 @@ The project layout with the usage for each folder is shown below:
 - [HiPlot](https://facebookresearch.github.io/hiplot/): interactive high-dimensional visualization for correlation and pattern discovery
 - [Plotly.py](https://plot.ly/python/): interactive browser-based graphing library
 - [Altair](https://altair-viz.github.io/): declarative visualization based on [Vega](http://vega.github.io/vega) and [Vega-Lite](http://vega.github.io/vega-lite)
+- [TabPy](https://tableau.github.io/TabPy/docs/about.html): [Tableau](https://www.tableau.com/) visualizations with Python
 - [Chartify](https://github.com/spotify/chartify): easy and flexible charts
 - [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): HTML profiling reports for Pandas DataFrames
 
