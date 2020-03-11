@@ -32,6 +32,7 @@ test:
 # TODO: train with certain config file
 
 pytest:
+	@echo ${PYTHONPATH}
 	@echo "unit testing ..."
 	@pytest || true
 
@@ -43,7 +44,7 @@ lint:
 	@echo "checking source code style with flake8 ...."
 	@flake8 src || true
 	@echo "checking source code style with pylint ...."
-	@pylint src || true
+	@pylint --rcfile pylint.rc src || true
 
 check:
 	@$(MAKE) mypy

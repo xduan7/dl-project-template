@@ -71,27 +71,33 @@ Please refer to the [Extra Packages](#extra-packages) section for some awesome p
 ## Template Layout
 The project layout with the usage for each folder is shown below:
 ```text
-[dl-project-template] tree .                                                                           
+dl-project-template
 .
-├── ...                 # project config (requirements, license, etc.)
+├── LICENSE.md
+├── README.md
+├── makefile            # makefile for various commands (install, train, pytest, mypy, lint, etc.) 
+├── mypy.ini            # MyPy type checking configurations
+├── pylint.rc           # Pylint code quality checking configurations
+├── pyproject.toml      # Poetry project and environment configurations
+|
 ├── data
-|   ├── ...             # data indexes and other descriptor files
-│   ├── raw             # directly downloaded and untreated data
-│   ├── interim         # intermediate results during processing
-│   └── processed       # processed data (features, targets) ready for learning
-├── docs                # documentations (txt, doc, jpeg, etc.)
-├── logs                # logs generated from programs
-├── models              # saved model parameters with optimizer
-├── notebooks           # jupyter notebooks for experiments and visualization 
-└── src    
-    ├── ...             # top-level scripts for deep learning
-    ├── configs         # configurations (*.py) for deep learning experiments
-    ├── processes       # data processing functions and classes
-    ├── modules         # layers, modules, and networks
-    ├── optimization    # optimizers and schedulers
-    ├── processes       # data processing functions (cleaning, validation, etc.)
-    ├── tests           # tests for processing steps, etc.
-    └── utilities       # other useful functions and classes  
+|   ├── ...             # data reference files (index, readme, etc.)
+│   ├── raw             # untreated data directly downloaded from source
+│   ├── interim         # intermediate data processing results
+│   └── processed       # processed data (features and targets) ready for learning
+├── notebooks           # Jupyter Notebooks (mostly for data processing and visualization)
+│── src    
+│   │── ...             # top-level scripts for training, testing and downloading
+│   ├── processes       # data processing functions and classes (cleaning, validation, imputation etc.)
+│   ├── modules         # activations, layers, modules, and networks (subclass of torch.nn.Module)
+│   ├── optimization    # deep learning optimizers and schedulers
+│   ├── configs         # configuration files for deep learning experiments
+│   └── utilities       # other useful functions and classes
+├── tests               # unit tests module for ./src
+│
+├── docs                # documentations (*.txt, *.doc, *.jpeg, etc.)
+├── logs                # logs for deep learning experiments
+└── models              # saved models with optimizer states
 ```
 
 
@@ -173,32 +179,9 @@ The project layout with the usage for each folder is shown below:
 
 
 ## Future Tasks
-- [x] python environment setup (pyproject.toml, makefile, etc.)
-    - [x] linting with pylint and flank8
-    - [x] static type checking with mypy
-    - [x] unit test setup with pytest
-- [x] commonly-used utility functions
-    - [x] random seeding (for Numpy, PyTorch, etc.)
-    - [x] gpu/cpu specification
-    - [x] debug decorator
-    - [x] getter of object (function, class, etc.) from module with target name
-- [x] customizable neural network modules
-    - [x] PyTorch activation function getter
-    - [x] configurable dense block
-    - [x] convolutional residual block
-- [x] customizable optimization functions
-    - [x] PyTorch optimizer getter
-    - [x] PyTorch learning rate scheduler getter 
-- [x] minimal setup for hyperparameter optimization
-    - [x] configuration file
-- [x] extra packages for ML/DL projects
-- [x] documentation
-    - [x] getting started
-    - [x] module docstrings
-    - [x] table of content section in readme
-    - [ ] ML/DL projects process flowchart 
-        - [ ] definition of several major steps
-        - [ ] clarify motivation and deliverables
+- [ ] ML/DL projects process flowchart 
+    - [ ] definition of several major steps
+    - [ ] clarify motivation and deliverables
 - [ ] small example for demonstration (omniglot?)
 
 
