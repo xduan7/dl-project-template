@@ -17,11 +17,26 @@ def get_valid_kwargs(
         func: Callable,
         kwargs: Optional[Dict[str, Any]],
 ) -> Dict[str, Any]:
+    """get the valid keyword arguments of a function
+
+    This function will check all the arguments of the given function,
+    and then select a subset of the valid keyword argument dictionary from
+    the given one.
+    Note that this function DOES NOT check if there are missing arguments.
+    Please refer to the function body for more details.
+
+    :param func: function to inspect for arguments
+    :param kwargs: a set of keyword arguments to select from
+    :return: the maximal subset of valid keyword arguments from the given
+    one for the function. Return empty dict if the given kwargs is None or
+    none of the arguments are found in the given kwargs
+    """
+
+    if kwargs is None:
+        return {}
+
     _func_args_spec = getfullargspec(func)
     _all_possible_args: List[str] = _func_args_spec.args
-    _required_args: List[str] = \
-        _all_possible_args[:-len(_func_args_spec.defaults)] \
-        if _func_args_spec.defaults else _all_possible_args
 
     _invalid_args: List[str] = []
     _valid_kwargs: Dict[str, Any] = {}
@@ -44,6 +59,10 @@ def get_valid_kwargs(
     # (1) missing argument checking is out of the scope for the purpose of
     # this function, which is meant to select valid arguments from dict kwargs
     # (2) can't find a elegant way to deal with 'self' argument
+    #
+    # _required_args: List[str] = \
+    #     _all_possible_args[:-len(_func_args_spec.defaults)] \
+    #     if _func_args_spec.defaults else _all_possible_args
     # _missing_args: List[str] = \
     #     [_arg for _arg in _required_args if _arg not in _valid_kwargs.keys()]
     # if len(_missing_args) > 0:

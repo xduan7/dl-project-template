@@ -141,7 +141,9 @@ disable=print-statement,
         comprehension-escape,
         # seems like argument differ is buggy and needs to be disabled
         # https://github.com/PyCQA/pylint/issues/1553
-        arguments-differ
+        arguments-differ,
+        # mostly for the unittest classes
+        no-self-use,
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -263,7 +265,9 @@ ignored-classes=optparse.Values,thread._local,_thread._local
 # (useful for modules/projects where namespaces are manipulated during runtime
 # and thus existing member attributes cannot be deduced by static analysis). It
 # supports qualified module names, as well as Unix pattern matching.
-ignored-modules=torch.optim
+ignored-modules=torch,
+                torch.optim,
+                numpy.random,
 
 # Show a hint with possible names when a member name was not found. The aspect
 # of finding the hint is based on edit distance.

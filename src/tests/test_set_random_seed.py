@@ -27,27 +27,35 @@ def _set_random_seed():
 
 
 class TestSetRandomSeed(unittest.TestCase):
+    """unittest class for 'set_random_seed' function
+    """
 
     def test_torch_randomness(self):
+        """test 'set_random_seed' function for torch
+        """
         _set_random_seed()
         _tensor = torch.rand(size=_TEST_TUPLE_SIZE)
 
         _set_random_seed()
-        assert((_tensor == torch.rand(size=_TEST_TUPLE_SIZE)).all())
+        assert (_tensor == torch.rand(size=_TEST_TUPLE_SIZE)).all()
 
     def test_randomness(self):
+        """test 'set_random_seed' function for random
+        """
         _set_random_seed()
         _random = random.random()
 
         _set_random_seed()
-        assert (_random == random.random())
+        assert _random == random.random()
 
     def test_numpy_randomness(self):
+        """test 'set_random_seed' function for numpy
+        """
         _set_random_seed()
         _array = np.random.random(size=_TEST_TUPLE_SIZE)
 
         _set_random_seed()
-        assert((_array == np.random.random(size=_TEST_TUPLE_SIZE)).all())
+        assert (_array == np.random.random(size=_TEST_TUPLE_SIZE)).all()
 
 
 if __name__ == '__main__':

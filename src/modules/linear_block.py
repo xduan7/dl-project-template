@@ -4,6 +4,8 @@ Project:            dl-project-template
 
 File Description:
 
+    This file implements a configurable linear/dense/fully-connected block
+
 """
 import logging
 from typing import List, Dict, Any, Optional

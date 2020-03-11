@@ -20,6 +20,11 @@ from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
 def is_torch_lr_scheduler_class(
         lr_scheduler_class: Any,
 ) -> bool:
+    """check if a argument class is a subclass of the base 'LRScheduler' class
+
+    :param lr_scheduler_class: learning rate scheduler class for checking
+    :return: bool indicator for a valid learning rate scheduler  class
+    """
     return is_subclass(lr_scheduler_class, LRScheduler)
 
 

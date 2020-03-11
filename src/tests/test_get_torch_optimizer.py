@@ -5,11 +5,11 @@ Project:            dl-project-template
 File Description:
 
 """
-import torch
 import inspect
 import unittest
-from functools import partial
 from typing import Tuple, Iterable, List, Dict, Any
+
+import torch
 
 from src.optimization import \
     Optimizer, is_torch_optimizer_class, get_torch_optimizer
@@ -32,7 +32,11 @@ _OPTIMIZER_KWARGS: Dict[str, Any] = {
 
 
 class TestGetTorchOptimizer(unittest.TestCase):
+    """unittest class for 'get_torch_optimizer' function
+    """
     def test_get_torch_optimizer(self):
+        """test 'get_torch_optimizer' function
+        """
         _optimizer_kwargs: Dict[str, Any] = {
             'parameters': _PARAMETERS,
             'optimizer_kwargs': _OPTIMIZER_KWARGS,

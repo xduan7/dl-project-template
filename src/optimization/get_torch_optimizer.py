@@ -19,6 +19,11 @@ from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
 def is_torch_optimizer_class(
         optimizer_class: Any,
 ) -> bool:
+    """check if a argument class is a subclass of the base 'Optimizer' class
+
+    :param optimizer_class: optimizer class for checking
+    :return: bool indicator for a valid optimizer class
+    """
     return is_subclass(optimizer_class, Optimizer)
 
 

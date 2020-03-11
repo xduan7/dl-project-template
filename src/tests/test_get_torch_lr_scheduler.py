@@ -4,11 +4,15 @@ Project:            dl-project-template
 
 File Description:
 
+    function for getting PyTorch learning rate scheduler, and its helper
+    functions and classes
+
 """
-import torch
 import inspect
 import unittest
 from typing import Tuple, Iterable, List, Dict, Any
+
+import torch
 
 from src.optimization import Optimizer, get_torch_optimizer
 from src.optimization import \
@@ -47,13 +51,17 @@ _LR_SCHEDULER_KWARGS: Dict[str, Any] = {
     # arguments for MultiStepLR
     'milestones': [2**_e for _e in range(4)],
     # arguments for OneCycleLR
-    'max_lr': 1e-2,
+    # 'max_lr': 1e-2,
     'total_steps': 128,
 }
 
 
 class TestGetTorchLRScheduler(unittest.TestCase):
+    """unittest class for 'get_torch_lr_scheduler' function
+    """
     def test_get_torch_lr_scheduler(self):
+        """test 'get_torch_lr_scheduler' function
+        """
         _lr_scheduler_kwargs: Dict[str, Any] = {
             'optimizer': _OPTIMIZER,
             'lr_scheduler_kwargs': _LR_SCHEDULER_KWARGS,

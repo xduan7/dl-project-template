@@ -1,5 +1,5 @@
 """
-File Name:          get_torch_activation.py
+File Name:          activation.py
 Project:            dl-project-template
 
 File Description:
@@ -33,7 +33,7 @@ def get_torch_activation(
 
     _valid_activation_kwargs: Dict[str, Any] = \
         get_valid_kwargs(
-            func=_activation_class.__init__,
+            func=type(_activation_class),
             kwargs=activation_kwargs,
         )
 
