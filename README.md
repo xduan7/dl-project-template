@@ -151,6 +151,7 @@ dl-project-template
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
 - [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and models for few-shot-learning/meta-learning
+- [PyTorch3D](https://pytorch3d.org/): library for deep learning with 3D data
 - [learn2learn](http://learn2learn.net/): meta-learning model implementations
 - [higher](https://higher.readthedocs.io/en/latest/): higher-order (unrolled first-order) optimization
 - [Captum](https://captum.ai/): model interpretability and understanding
