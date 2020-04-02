@@ -73,6 +73,7 @@ The project layout with the usage for each folder is shown below:
 ```text
 dl-project-template
 .
+|
 ├── LICENSE.md
 ├── README.md
 ├── makefile            # makefile for various commands (install, train, pytest, mypy, lint, etc.) 
@@ -85,6 +86,7 @@ dl-project-template
 │   ├── raw             # untreated data directly downloaded from source
 │   ├── interim         # intermediate data processing results
 │   └── processed       # processed data (features and targets) ready for learning
+|
 ├── notebooks           # Jupyter Notebooks (mostly for data processing and visualization)
 │── src    
 │   │── ...             # top-level scripts for training, testing and downloading
@@ -95,7 +97,7 @@ dl-project-template
 │   └── utilities       # other useful functions and classes
 ├── tests               # unit tests module for ./src
 │
-├── docs                # documentations (*.txt, *.doc, *.jpeg, etc.)
+├── docs                # documentation files (*.txt, *.doc, *.jpeg, etc.)
 ├── logs                # logs for deep learning experiments
 └── models              # saved models with optimizer states
 ```
