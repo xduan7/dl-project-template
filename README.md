@@ -90,10 +90,10 @@ dl-project-template
 ├── notebooks           # Jupyter Notebooks (mostly for data processing and visualization)
 │── src    
 │   │── ...             # top-level scripts for training, testing and downloading
-│   ├── processes       # data processing functions and classes (cleaning, validation, imputation etc.)
+│   ├── configs         # configuration files for deep learning experiments
+│   ├── data_processes  # data processing functions and classes (cleaning, validation, imputation etc.)
 │   ├── modules         # activations, layers, modules, and networks (subclass of torch.nn.Module)
 │   ├── optimization    # deep learning optimizers and schedulers
-│   ├── configs         # configuration files for deep learning experiments
 │   └── utilities       # other useful functions and classes
 ├── tests               # unit tests module for ./src
 │
