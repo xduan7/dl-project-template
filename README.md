@@ -124,6 +124,7 @@ dl-project-template
 - [Pachyderm](https://www.pachyderm.com/): data pipelining (versioning, lineage/tracking, and parallelization)
 - [d6tflow](https://d6tflow.readthedocs.io/en/latest/): effective data workflow
 - [Metaflow](https://metaflow.org/): end-to-end independent workflow 
+- [Dolt](https://github.com/liquidata-inc/dolt): relational database with version control
 
 ### Visualization and Analysis
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
@@ -171,6 +172,7 @@ dl-project-template
 - [Google Datasets](https://cloud.google.com/public-datasets): high-demand public datasets
 - [Google Dataset Search](https://datasetsearch.research.google.com): a search engine for freely-available online data
 - [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
+- [DoltHub](https://www.dolthub.com/): data collaboration with Dolt
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
 
 ### Readings:
