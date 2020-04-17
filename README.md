@@ -165,6 +165,7 @@ dl-project-template
 - [NetworkX](https://networkx.github.io/documentation/stable/): creation, manipulation, and study of complex networks/graphs
 - [Gym](https://gym.openai.com/): toolkit for developing and comparing reinforcement learning algorithms
 - [Polygames](https://github.com/facebookincubator/polygames): a platform of zero learning with a library of games
+- [Mlxtend](http://rasbt.github.io/mlxtend/): extensions and helper modules for data analysis and machine learning
 
 
 ## Resources
