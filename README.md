@@ -125,6 +125,7 @@ dl-project-template
 - [d6tflow](https://d6tflow.readthedocs.io/en/latest/): effective data workflow
 - [Metaflow](https://metaflow.org/): end-to-end independent workflow 
 - [Dolt](https://github.com/liquidata-inc/dolt): relational database with version control
+- [Airflow](https://airflow.apache.org/): platform to programmatically author, schedule and monitor workflows
 
 ### Visualization and Analysis
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
