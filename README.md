@@ -12,7 +12,7 @@ However, one can easily transfer and utilize the template to any project impleme
     - [Data Validation and Cleaning](#data-validation-and-cleaning)
     - [Performance and Caching](#performance-and-caching)
     - [Data Version Control and Workflow](#data-version-control-and-workflow)
-    - [Visualization and Analysis](#visualization-and-analysis)
+    - [Visualization and Presentation](#visualization-and-presentation)
     - [Project Lifecycles and Hyperparameter Optimization](#project-lifecycles-and-hyperparameter-optimization)
     - [PyTorch Extensions](#pytorch-extensions)
     - [Miscellaneous](#miscellaneous)
@@ -127,7 +127,7 @@ dl-project-template
 - [Dolt](https://github.com/liquidata-inc/dolt): relational database with version control
 - [Airflow](https://airflow.apache.org/): platform to programmatically author, schedule and monitor workflows
 
-### Visualization and Analysis
+### Visualization and Presentation
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
 - [HiPlot](https://facebookresearch.github.io/hiplot/): interactive high-dimensional visualization for correlation and pattern discovery
 - [Plotly.py](https://plot.ly/python/): interactive browser-based graphing library
@@ -135,6 +135,7 @@ dl-project-template
 - [TabPy](https://tableau.github.io/TabPy/docs/about.html): [Tableau](https://www.tableau.com/) visualizations with Python
 - [Chartify](https://github.com/spotify/chartify): easy and flexible charts
 - [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): HTML profiling reports for Pandas DataFrames
+= [missingno](https://github.com/ResidentMario/missingno): toolset of flexible and easy-to-use missing data visualizations and utilities
 
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
