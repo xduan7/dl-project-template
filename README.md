@@ -181,7 +181,8 @@ dl-project-template
 ### Readings:
 - [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
 - [Rules of Machine Learning: Best Practices for ML Engineering](http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf) by Martin Zinkevich
- 
+- [Awesome Data Science](https://github.com/academic/awesome-datascience): an awesome data science repository to learn and apply for real world problems
+
 ### Other ML/DL Templates:
 - [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): a logical, reasonably standardized, but flexible project structure
 - [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
