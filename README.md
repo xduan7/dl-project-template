@@ -126,6 +126,7 @@ dl-project-template
 - [Metaflow](https://metaflow.org/): end-to-end independent workflow 
 - [Dolt](https://github.com/liquidata-inc/dolt): relational database with version control
 - [Airflow](https://airflow.apache.org/): platform to programmatically author, schedule and monitor workflows
+- [Luigi](https://luigi.readthedocs.io/en/stable/): dependency resolution, workflow management, visualization, etc.
 
 ### Visualization and Presentation
 - [Seaborn](https://seaborn.pydata.org/): data visualization based on [Matplotlib](https://matplotlib.org/)
