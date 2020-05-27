@@ -109,6 +109,7 @@ dl-project-template
 - [Cerberus](http://docs.python-cerberus.org/en/stable/): lightweight data validation functionality
 - [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
 - [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality checking
+- [Feature-engine](https://feature-engine.readthedocs.io/en/latest/index.html): transformer library for feature preparation and engineering
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
@@ -136,7 +137,8 @@ dl-project-template
 - [TabPy](https://tableau.github.io/TabPy/docs/about.html): [Tableau](https://www.tableau.com/) visualizations with Python
 - [Chartify](https://github.com/spotify/chartify): easy and flexible charts
 - [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): HTML profiling reports for Pandas DataFrames
-= [missingno](https://github.com/ResidentMario/missingno): toolset of flexible and easy-to-use missing data visualizations and utilities
+- [missingno](https://github.com/ResidentMario/missingno): toolset of flexible and easy-to-use missing data visualizations and utilities
+- [Yellowbrick](https://www.scikit-yb.org/en/latest/): Scikit-Learn visualization for model selection and hyperparameter tuning
 
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
@@ -169,6 +171,9 @@ dl-project-template
 - [Gym](https://gym.openai.com/): toolkit for developing and comparing reinforcement learning algorithms
 - [Polygames](https://github.com/facebookincubator/polygames): a platform of zero learning with a library of games
 - [Mlxtend](http://rasbt.github.io/mlxtend/): extensions and helper modules for data analysis and machine learning
+- [NLTK](https://www.nltk.org/): a leading platform for building Python programs to work with human language data
+- [PyCaret](https://pycaret.org/): low-code machine learning library
+- [dabl](https://dabl.github.io/dev/): baseline library for data analysis
 
 
 ## Resources
