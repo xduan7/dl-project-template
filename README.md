@@ -139,7 +139,8 @@ dl-project-template
 - [Pandas-Profiling](https://pandas-profiling.github.io/pandas-profiling/docs/): HTML profiling reports for Pandas DataFrames
 - [missingno](https://github.com/ResidentMario/missingno): toolset of flexible and easy-to-use missing data visualizations and utilities
 - [Yellowbrick](https://www.scikit-yb.org/en/latest/): Scikit-Learn visualization for model selection and hyperparameter tuning
-
+- [FlashTorch](https://github.com/MisaOgura/flashtorch): visualization toolkit for neural networks in PyTorch
+ 
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
 - [Comet.ml](https://www.comet.ml/site/): self-hosted and cloud-based meta machine learning platform for tracking, comparing, explaining and optimizing experiments and models
