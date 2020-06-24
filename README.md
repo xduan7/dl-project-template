@@ -167,6 +167,7 @@ dl-project-template
 - [PyTorch summary](https://github.com/sksq96/pytorch-summary): Keras style summary for PyTorch models
 
 ### Miscellaneous
+- [Awesome-Pytorch-list](https://github.com/bharathgs/Awesome-pytorch-list): a comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc. 
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
 - [NetworkX](https://networkx.github.io/documentation/stable/): creation, manipulation, and study of complex networks/graphs
 - [Gym](https://gym.openai.com/): toolkit for developing and comparing reinforcement learning algorithms
