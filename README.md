@@ -176,7 +176,7 @@ dl-project-template
 - [NLTK](https://www.nltk.org/): a leading platform for building Python programs to work with human language data
 - [PyCaret](https://pycaret.org/): low-code machine learning library
 - [dabl](https://dabl.github.io/dev/): baseline library for data analysis
-
+- [OGB](https://ogb.stanford.edu/): benchmark datasets, data loaders and evaluators for graph machine learning
 
 ## Resources
 ### Datasets:
