@@ -169,6 +169,7 @@ dl-project-template
 ### Miscellaneous
 - [Awesome-Pytorch-list](https://github.com/bharathgs/Awesome-pytorch-list): a comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc. 
 - [DoWhy](https://microsoft.github.io/dowhy/): causal inference combining causal graphical models and potential outcomes
+- [CausalML](https://causalml.readthedocs.io/en/latest/?badge=latest): a suite of uplift modeling and causal inference methods using machine learning algorithms based on recent research
 - [NetworkX](https://networkx.github.io/documentation/stable/): creation, manipulation, and study of complex networks/graphs
 - [Gym](https://gym.openai.com/): toolkit for developing and comparing reinforcement learning algorithms
 - [Polygames](https://github.com/facebookincubator/polygames): a platform of zero learning with a library of games
