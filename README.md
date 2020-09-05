@@ -159,6 +159,7 @@ dl-project-template
 - [Kornia](https://kornia.org/): differentiable computer vision library
 - [DGL](http://dgl.ai/): package for deep learning on graphs
 - [PyGeometric](https://pytorch-geometric.readthedocs.io/): geometric deep learning extension library for PyTorch
+- [PyTorch-BigGraph](https://torchbiggraph.readthedocs.io/en/latest/?badge=latest): a distributed system for learning graph embeddings for large graphs
 - [Torchmeta](https://tristandeleu.github.io/pytorch-meta/): datasets and models for few-shot-learning/meta-learning
 - [PyTorch3D](https://pytorch3d.org/): library for deep learning with 3D data
 - [learn2learn](http://learn2learn.net/): meta-learning model implementations
