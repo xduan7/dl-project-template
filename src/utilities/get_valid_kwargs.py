@@ -4,6 +4,9 @@ Project:            dl-project-template
 
 File Description:
 
+    This file implements a helper function that extracts keyword arguments
+    from an given function.
+
 """
 import logging
 from inspect import getfullargspec

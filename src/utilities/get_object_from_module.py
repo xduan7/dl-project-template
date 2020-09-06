@@ -4,6 +4,9 @@ Project:            dl-project-template
 
 File Description:
 
+    This file implements three functions that extracts objects, classes,
+    or functions from a given Python module.
+
 """
 import logging
 import inspect

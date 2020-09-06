@@ -4,7 +4,7 @@ Project:            dl-project-template
 
 File Description:
 
-    This file implement a simple replacement for subclass checking
+    This file implements a simple replacement for subclass checking
 
 """
 from inspect import isclass
