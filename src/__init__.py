@@ -31,11 +31,12 @@ import logging
 # 'modules' and 'utilities' should not be used without any parent package
 
 # constants (persistent throughout all experiments)
-RAW_DATA_DIR_PATH = os.path.abspath('../data/raw')
-INTERIM_DATA_DIR_PATH = os.path.abspath('../data/interim')
-PROCESSED_DATA_DIR_PATH = os.path.abspath('../data/processed')
-LOG_DIR_PATH = os.path.abspath('../logs')
-MODEL_DIR_PATH = os.path.abspath('../models')
+SRC_DIR_PATH = os.path.dirname(os.path.abspath(__file__))
+RAW_DATA_DIR_PATH = os.path.join(SRC_DIR_PATH, '../data/raw')
+INTERIM_DATA_DIR_PATH = os.path.join(SRC_DIR_PATH, '../data/interim')
+PROCESSED_DATA_DIR_PATH = os.path.join(SRC_DIR_PATH, '../data/processed')
+LOG_DIR_PATH = os.path.join(SRC_DIR_PATH, '../logs')
+MODEL_DIR_PATH = os.path.join(SRC_DIR_PATH, '../models')
 
 
 logging.basicConfig(
