@@ -61,7 +61,8 @@ Alternatively, you can simply download this repo in zipped format and get starte
 
 Next, you can install all the dependencies by typing the following command in project root:
 ```bash
-make install # or "poetry install"
+conda install poetry  # or 'pip install poetry'
+poetry install
 ```
 
 Finally, you can wrap up the setup by manually install and update any packages you'd like. 

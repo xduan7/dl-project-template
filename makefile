@@ -29,12 +29,12 @@ train:
 
 test:
 	@echo "testing ..."
-# TODO: train with certain config file
+# TODO: test/evaluate with certain config file
 
 pytest:
 	@echo ${PYTHONPATH}
 	@echo "unit testing ..."
-	@pytest || true
+	@python -m pytest || true
 
 mypy:
 	@echo "checking source code typing with mypy ...."
