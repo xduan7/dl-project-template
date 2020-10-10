@@ -15,7 +15,7 @@ from src.utilities import plot_lr_scheduler
 from src.optimization import get_torch_optimizer, get_torch_lr_scheduler
 
 
-class TestPlotLRScheduler(unittest.TestCase):
+class TestPlotLRSchedworkflowsuler(unittest.TestCase):
     def test_plot_lr_scheduler(self):
 
         _param: Iterable[torch.Tensor] = \
