@@ -9,7 +9,7 @@ File Description:
 
 """
 import logging
-from typing import Optional, List
+from typing import Optional, Union, List
 
 import torch
 from torch import device as Device
@@ -29,7 +29,7 @@ _LOGGER = logging.getLogger(__name__)
 
 
 def get_computation_devices(
-        preferred_gpu_list: Optional[List[int]],
+        preferred_gpu_list: Optional[Union[List[int], str]],
         multi_gpu_flag: bool,
 ) -> List[Device]:
     """get the available computation devices (CPU & GPUs)
@@ -38,10 +38,14 @@ def get_computation_devices(
     preferred list of GPU and flag for multi-GPU computation.
 
     :param preferred_gpu_list: preferred list of GPUs represented with
-    integers starting from 0. For instances, [0, 2] represents th first and
-    the third GPUs. None or empty list of GPUS indicate the usage of CPU
+    integers starting from 0; e.g. [0, 2] represents th first and
+    the third GPUs; none or empty list of GPUS indicate the usage of CPU;
+    and 'all' indicates all GPUs are preferred
+    :type preferred_gpu_list: Optional[Union[List[int], str]]
     :param multi_gpu_flag: boolean flag for multi-GPU training and testing
-    :return: list of integers representing the available devices (CPU & GPUs)
+    :type multi_gpu_flag: bool
+    :return: list of available computation devices (CPU & GPUs)
+    :rtype: List[Device]
     """
 
     # use CPU when GPUs are not preferred or not available
@@ -72,8 +76,15 @@ def get_computation_devices(
         _LOGGER.warning(_warning_msg)
 
     # get the overlap between the preferred and the available GPUs
-    _gpus = \
-        [_g for _g in _available_gpu_list if _g in preferred_gpu_list]
+    if isinstance(preferred_gpu_list, str) and preferred_gpu_list == 'all':
+        _gpus = _available_gpu_list
+    elif isinstance(preferred_gpu_list, list):
+        _gpus = list(set(_available_gpu_list).intersection(preferred_gpu_list))
+    else:
+        _error_msg = \
+            f'Unknown parameter {preferred_gpu_list} for the list of ' \
+            f'preferred GPUs. Must be either \"all\" or list of integers.'
+        raise ValueError(_error_msg)
 
     # use CPU if there is no preferred GPUs that are available
     if len(_gpus) == 0:
