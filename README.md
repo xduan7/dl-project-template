@@ -114,6 +114,7 @@ dl-project-template
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
+- [CuPy](https://cupy.dev): NumPy-like API accelerated with CUDA 
 - [Dask](https://dask.org/): parallel computing library
 - [Ray](https://ray.io/): framework for distributed applications
 - [Modin](http://modin.readthedocs.io/): parallelized Pandas with [Dask](https://dask.org/) or [Ray](https://ray.io/)
