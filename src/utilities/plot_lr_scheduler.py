@@ -9,16 +9,13 @@ File Description:
 
 """
 import logging
-from typing import List, Tuple, Iterable, Optional
+from typing import List, Tuple, Optional
 
-import torch
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from torch.optim.optimizer import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
-
-from src.optimization import get_torch_optimizer, get_torch_lr_scheduler
 
 
 logging.getLogger('matplotlib').setLevel(logging.WARNING)
