@@ -10,9 +10,10 @@ import unittest
 from typing import Tuple, Iterable, List, Dict, Any
 
 import torch
+from torch.optim.optimizer import Optimizer
 
-from src.optimization import \
-    Optimizer, is_torch_optimizer_class, get_torch_optimizer
+from src.optimization import get_torch_optimizer
+from src.optimization.get_torch_optimizer import is_torch_optimizer_class
 
 
 _PARAMETER_TENSOR_SIZE: Tuple[int, int] = (32, 1024)

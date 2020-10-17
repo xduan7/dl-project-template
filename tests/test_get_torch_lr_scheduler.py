@@ -13,10 +13,12 @@ import unittest
 from typing import Tuple, Iterable, List, Dict, Any
 
 import torch
+from torch.optim.optimizer import Optimizer
+from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
-from src.optimization import Optimizer, get_torch_optimizer
-from src.optimization import \
-    LRScheduler, is_torch_lr_scheduler_class, get_torch_lr_scheduler
+from src.optimization import get_torch_optimizer
+from src.optimization import get_torch_lr_scheduler
+from src.optimization.get_torch_lr_scheduler import is_torch_lr_scheduler_class
 
 
 _PARAMETER_TENSOR_SIZE: Tuple[int, int] = (32, 1024)

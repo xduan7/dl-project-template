@@ -11,7 +11,7 @@ from typing import Iterable
 import torch
 from torch.optim.optimizer import Optimizer
 
-from src.utilities import plot_lr_scheduler
+from src.utilities.plot_lr_scheduler import plot_lr_scheduler
 from src.optimization import get_torch_optimizer, get_torch_lr_scheduler
 
 
