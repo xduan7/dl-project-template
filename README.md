@@ -168,6 +168,7 @@ dl-project-template
 - [higher](https://higher.readthedocs.io/en/latest/): higher-order (unrolled first-order) optimization
 - [Captum](https://captum.ai/): model interpretability and understanding
 - [PyTorch summary](https://github.com/sksq96/pytorch-summary): Keras style summary for PyTorch models
+- [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
 
 ### Miscellaneous
 - [Awesome-Pytorch-list](https://github.com/bharathgs/Awesome-pytorch-list): a comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc. 
