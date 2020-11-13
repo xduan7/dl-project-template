@@ -183,6 +183,7 @@ dl-project-template
 - [dabl](https://dabl.github.io/dev/): baseline library for data analysis
 - [OGB](https://ogb.stanford.edu/): benchmark datasets, data loaders and evaluators for graph machine learning
 - [AI Explainability 360](https://aix360.mybluemix.net/): a toolkit for interpretability and explainability of datasets and machine learning models
+- [SDV](https://sdv.dev/SDV/): synthetic data generation for tabular, relational, time series data
 
 
 ## Resources
