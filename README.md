@@ -184,6 +184,7 @@ dl-project-template
 - [OGB](https://ogb.stanford.edu/): benchmark datasets, data loaders and evaluators for graph machine learning
 - [AI Explainability 360](https://aix360.mybluemix.net/): a toolkit for interpretability and explainability of datasets and machine learning models
 - [SDV](https://sdv.dev/SDV/): synthetic data generation for tabular, relational, time series data
+- [SHAP](https://github.com/slundberg/shap): game theoretic approach to explain the output of any machine learning mode
 
 
 ## Resources
