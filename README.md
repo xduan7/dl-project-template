@@ -111,6 +111,7 @@ dl-project-template
 - [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
 - [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality checking
 - [Feature-engine](https://feature-engine.readthedocs.io/en/latest/index.html): transformer library for feature preparation and engineering
+- [pydantic](https://pydantic-docs.helpmanual.io/): data parsing and validation using Python type hints 
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
