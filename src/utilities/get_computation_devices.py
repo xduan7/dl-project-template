@@ -8,6 +8,7 @@ File Description:
     system device availability.
 
 """
+import os
 import logging
 from typing import Optional, Union, List
 
@@ -75,8 +76,6 @@ def get_computation_devices(
             f'and ready for training ... '
         _LOGGER.warning(_warning_msg)
 
-    print(_available_gpu_list)
-
     # if CUDA_VISIBLE_DEVICES is set as an environment variable, then make
     # sure that the list of available GPUs are visible, and re-index them in
     # the way that PyTorch can access. For example:
@@ -93,8 +92,6 @@ def get_computation_devices(
                 _available_gpu_list_.append(
                     _cuda_visible_devices.index(__available_gpu_id))
         _available_gpu_list = _available_gpu_list_
-
-    print(_available_gpu_list)
 
     # double check to make sure that all GPUs are accessible for PyTorch
     _available_gpu_list_: List[int] = []
