@@ -151,11 +151,17 @@ dl-project-template
 - [Optuna](https://optuna.org/): automatic hyperparameter optimization framework
 - [Hyperopt](http://hyperopt.github.io/hyperopt): serial and parallel optimization
 - [Tune](https://ray.readthedocs.io/en/latest/tune.html): scalable experiment execution and hyperparameter tuning
+- [Determined](https://determined.ai/): deep learning training platform
 
-### PyTorch Extensions
+### Distribution, Pipelining, and Sharding
+- [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
+- [DeepSpeed](https://www.deepspeed.ai/): a deep learning optimization library that makes distributed training easy, efficient, and effective
+- [Horovod](https://eng.uber.com/horovod/): a distributed deep learning training framework
+- [RaySGD](https://ray.readthedocs.io/en/latest/raysgd/raysgd.html): lightweight wrappers for distributed deep learning
+
+### Other PyTorch Extensions
 - [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
 - [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning): lightweight wrapper for less boilerplate
-- [RaySGD](https://ray.readthedocs.io/en/latest/raysgd/raysgd.html): lightweight wrappers for distributed deep learning
 - [fastai](https://docs.fast.ai/): out-of-the-box tools and models for vision, text, and other data
 - [Skorch](https://skorch.readthedocs.io/en/latest/?badge=latest): [Scikit-Learn](https://scikit-learn.org/stable/index.html) interface for PyTorch models
 - [PyRo](https://pyro.ai/): deep universal probabilistic programming with PyTorch
@@ -168,8 +174,7 @@ dl-project-template
 - [learn2learn](http://learn2learn.net/): meta-learning model implementations
 - [higher](https://higher.readthedocs.io/en/latest/): higher-order (unrolled first-order) optimization
 - [Captum](https://captum.ai/): model interpretability and understanding
-- [PyTorch summary](https://github.com/sksq96/pytorch-summary): Keras style summary for PyTorch models
-- [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
+- [PyTorch summary](https://github.com/amarczew/pytorch_model_summary): Keras style summary for PyTorch models
 - [Catalyst](https://catalyst-team.github.io/catalyst/): PyTorch framework for Deep Learning research and development
 
 ### Miscellaneous
