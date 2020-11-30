@@ -155,6 +155,7 @@ dl-project-template
 
 ### Distribution, Pipelining, and Sharding
 - [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
+- [PipeDream](https://github.com/msr-fiddle/pipedream): generalized pipeline parallelism for deep neural network training
 - [DeepSpeed](https://www.deepspeed.ai/): a deep learning optimization library that makes distributed training easy, efficient, and effective
 - [Horovod](https://eng.uber.com/horovod/): a distributed deep learning training framework
 - [RaySGD](https://ray.readthedocs.io/en/latest/raysgd/raysgd.html): lightweight wrappers for distributed deep learning
