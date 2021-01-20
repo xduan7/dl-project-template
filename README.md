@@ -105,13 +105,15 @@ dl-project-template
 
 
 ## Extra Packages
-### Data Validation and Cleaning
+### Data Analysis, Validation and Cleaning
 - [Great Expectation](https://docs.greatexpectations.io/en/latest/): data validation, documenting, and profiling
 - [Cerberus](http://docs.python-cerberus.org/en/stable/): lightweight data validation functionality
 - [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
 - [PyDQC](https://github.com/SauceCat/pydqc): automatic data quality checking
 - [Feature-engine](https://feature-engine.readthedocs.io/en/latest/index.html): transformer library for feature preparation and engineering
 - [pydantic](https://pydantic-docs.helpmanual.io/): data parsing and validation using Python type hints 
+- [Dora](https://github.com/NathanEpstein/Dora): exploratory data analysis toolkit for Python
+- [datacleaner](https://github.com/rhiever/datacleaner): automatically cleans data sets and readies them for analysis
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
@@ -143,6 +145,8 @@ dl-project-template
 - [missingno](https://github.com/ResidentMario/missingno): toolset of flexible and easy-to-use missing data visualizations and utilities
 - [Yellowbrick](https://www.scikit-yb.org/en/latest/): Scikit-Learn visualization for model selection and hyperparameter tuning
 - [FlashTorch](https://github.com/MisaOgura/flashtorch): visualization toolkit for neural networks in PyTorch
+- [Streamlit](https://www.streamlit.io/): turn data scripts into sharable web apps in minutes
+- [python-tabulate](https://github.com/astanin/python-tabulate): pretty-print tabular data in Python, a library and a command-line utility
  
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
@@ -202,6 +206,9 @@ dl-project-template
 - [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
 - [DoltHub](https://www.dolthub.com/): data collaboration with Dolt
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
+
+### Libraries:
+- [Best-of Machine Learning with Python](https://github.com/ml-tooling/best-of-ml-python): a ranked list of awesome machine learning Python libraries
 
 ### Readings:
 - [Machine Learning Systems Design](https://github.com/chiphuyen/machine-learning-systems-design) by Chip Huyen
