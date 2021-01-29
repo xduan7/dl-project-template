@@ -147,6 +147,7 @@ dl-project-template
 - [FlashTorch](https://github.com/MisaOgura/flashtorch): visualization toolkit for neural networks in PyTorch
 - [Streamlit](https://www.streamlit.io/): turn data scripts into sharable web apps in minutes
 - [python-tabulate](https://github.com/astanin/python-tabulate): pretty-print tabular data in Python, a library and a command-line utility
+- [Lux](https://github.com/lux-org/lux): Python API for intelligent visual data discovery 
  
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
