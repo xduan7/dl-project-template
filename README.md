@@ -114,6 +114,7 @@ dl-project-template
 - [pydantic](https://pydantic-docs.helpmanual.io/): data parsing and validation using Python type hints 
 - [Dora](https://github.com/NathanEpstein/Dora): exploratory data analysis toolkit for Python
 - [datacleaner](https://github.com/rhiever/datacleaner): automatically cleans data sets and readies them for analysis
+- [whale](https://docs.whale.cx/): a lightweight data discovery, documentation, and quality engine for data warehouse
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
@@ -207,6 +208,7 @@ dl-project-template
 - [OpenML](https://www.openml.org/): online platform for sharing data, ML algorithms and experiments
 - [DoltHub](https://www.dolthub.com/): data collaboration with Dolt
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
+- [Data Portal](https://dataportals.org/): a comprehensive list of open data portals from around the world
 
 ### Libraries:
 - [Best-of Machine Learning with Python](https://github.com/ml-tooling/best-of-ml-python): a ranked list of awesome machine learning Python libraries
