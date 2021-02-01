@@ -183,6 +183,7 @@ dl-project-template
 - [Captum](https://captum.ai/): model interpretability and understanding
 - [PyTorch summary](https://github.com/amarczew/pytorch_model_summary): Keras style summary for PyTorch models
 - [Catalyst](https://catalyst-team.github.io/catalyst/): PyTorch framework for Deep Learning research and development
+- [Poutyne](https://poutyne.org/): a simplified framework for PyTorch and handles much of the boilerplate code needed to train neural networks
 
 ### Miscellaneous
 - [Awesome-Pytorch-list](https://github.com/bharathgs/Awesome-pytorch-list): a comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc. 
@@ -199,6 +200,7 @@ dl-project-template
 - [AI Explainability 360](https://aix360.mybluemix.net/): a toolkit for interpretability and explainability of datasets and machine learning models
 - [SDV](https://sdv.dev/SDV/): synthetic data generation for tabular, relational, time series data
 - [SHAP](https://github.com/slundberg/shap): game theoretic approach to explain the output of any machine learning mode
+- [TextBlob](https://textblob.readthedocs.io/en/dev/): a Python (2 and 3) library for processing textual data
 
 
 ## Resources
