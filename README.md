@@ -149,6 +149,7 @@ dl-project-template
 - [Streamlit](https://www.streamlit.io/): turn data scripts into sharable web apps in minutes
 - [python-tabulate](https://github.com/astanin/python-tabulate): pretty-print tabular data in Python, a library and a command-line utility
 - [Lux](https://github.com/lux-org/lux): Python API for intelligent visual data discovery 
+- [bokeh](https://bokeh.org/): interactive data visualization in the browser, from Python
  
 ### Project Lifecycles and Hyperparameter Optimization
 - [NNI](https://nni.readthedocs.io/en/latest/): automate ML/DL lifecycle (feature engineering, neural architecture search, model compression and hyperparameter tuning)
@@ -183,7 +184,7 @@ dl-project-template
 - [Captum](https://captum.ai/): model interpretability and understanding
 - [PyTorch summary](https://github.com/amarczew/pytorch_model_summary): Keras style summary for PyTorch models
 - [Catalyst](https://catalyst-team.github.io/catalyst/): PyTorch framework for Deep Learning research and development
-- [Poutyne](https://poutyne.org/): a simplified framework for PyTorch and handles much of the boilerplate code needed to train neural networks
+- [Poutyne](https://poutyne.org/): a simplified framework for PyTorch and handles much of the ea code needed to train neural networks
 
 ### Miscellaneous
 - [Awesome-Pytorch-list](https://github.com/bharathgs/Awesome-pytorch-list): a comprehensive list of pytorch related content on github,such as different models,implementations,helper libraries,tutorials etc. 
