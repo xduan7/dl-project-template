@@ -159,6 +159,7 @@ dl-project-template
 - [Hyperopt](http://hyperopt.github.io/hyperopt): serial and parallel optimization
 - [Tune](https://ray.readthedocs.io/en/latest/tune.html): scalable experiment execution and hyperparameter tuning
 - [Determined](https://determined.ai/): deep learning training platform
+- [Aim](https://aimstack.io/): a super-easy way to record, search and compare 1000s of ML training runs 
 
 ### Distribution, Pipelining, and Sharding
 - [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
