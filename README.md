@@ -213,6 +213,7 @@ dl-project-template
 - [DoltHub](https://www.dolthub.com/): data collaboration with Dolt
 - [OpenBlender](https://www.openblender.io): live-streamed open data sources
 - [Data Portal](https://dataportals.org/): a comprehensive list of open data portals from around the world
+- [Activeloop](https://www.activeloop.ai/): unstructured dataset management for TensorFlow/PyTorch
 
 ### Libraries:
 - [Best-of Machine Learning with Python](https://github.com/ml-tooling/best-of-ml-python): a ranked list of awesome machine learning Python libraries
