@@ -115,6 +115,8 @@ dl-project-template
 - [Dora](https://github.com/NathanEpstein/Dora): exploratory data analysis toolkit for Python
 - [datacleaner](https://github.com/rhiever/datacleaner): automatically cleans data sets and readies them for analysis
 - [whale](https://docs.whale.cx/): a lightweight data discovery, documentation, and quality engine for data warehouse
+- [bamboolib](https://bamboolib.8080labs.com/): a tool for fast and easy data exploration & transformation of pandas DataFrames
+- [pandas-summary](https://github.com/mouradmourafiq/pandas-summary): an extension to pandas dataframes describe function
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
@@ -160,6 +162,7 @@ dl-project-template
 - [Tune](https://ray.readthedocs.io/en/latest/tune.html): scalable experiment execution and hyperparameter tuning
 - [Determined](https://determined.ai/): deep learning training platform
 - [Aim](https://aimstack.io/): a super-easy way to record, search and compare 1000s of ML training runs 
+- [TPOT](https://epistasislab.github.io/tpot/): a Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming
 
 ### Distribution, Pipelining, and Sharding
 - [torchgpipe](https://torchgpipe.readthedocs.io/en/stable/): a scalable pipeline parallelism library, which allows efficient training of large, memory-consuming models
