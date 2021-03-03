@@ -239,7 +239,7 @@ dl-project-template
 
 
 ## Authors
-* Xiaotian Duan (Email: xduan7 at uchicago.edu)
+* Xiaotian Duan (Email: xduan7 at gmail.com)
 
 
 ## License
