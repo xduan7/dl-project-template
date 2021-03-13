@@ -127,6 +127,7 @@ dl-project-template
 - [Vaex](https://vaex.readthedocs.io/en/latest/index.html): lazy memory-mapping dataframe for big data
 - [Joblib](https://joblib.readthedocs.io/en/latest/): disk-caching and parallelization
 - [RAPIDS](https://rapids.ai/): GPU acceleration for data science
+- [Polars](https://github.com/ritchie46/polars): a blazingly fast DataFrames library implemented in Rust & Python
 
 ### Data Version Control and Workflow
 - [DVC](https://dvc.org/): data version control system
