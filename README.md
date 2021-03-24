@@ -171,6 +171,7 @@ dl-project-template
 - [DeepSpeed](https://www.deepspeed.ai/): a deep learning optimization library that makes distributed training easy, efficient, and effective
 - [Horovod](https://eng.uber.com/horovod/): a distributed deep learning training framework
 - [RaySGD](https://ray.readthedocs.io/en/latest/raysgd/raysgd.html): lightweight wrappers for distributed deep learning
+- [AdaptDL](https://adaptdl.readthedocs.io): a resource-adaptive deep learning training and scheduling framework
 
 ### Other PyTorch Extensions
 - [Ignite](https://pytorch.org/ignite/): high-level library based on PyTorch
