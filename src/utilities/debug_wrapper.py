@@ -1,70 +1,71 @@
-"""
-File Name:          debug_wrapper.py
-Project:            dl-project-template
-
-File Description:
-
-    Function wrapper (decorator) for debugging purposes. Check the function
-    docstring for more details.
-
-    Reference: https://stackoverflow.com/a/39643469
-
-"""
 import time
 import logging
 from typing import Callable, Any
+from inspect import getfullargspec
 from functools import wraps, partial
 
-# _LOGGER = logging.getLogger(__name__)
-_DEBUG_WRAPPER_LOG_LEVEL = logging.INFO
 
+def debug_wrapper(logging_level: int):
+    """A factory that generates debug wrappers for functions.
 
-def debug_wrapper(
-        func: Callable,
-) -> Callable:
-    """function wrapper (decorator) for debugging purpose
+    This function implements a factory with logging level as argument
+    for function wrappers with debugging purposes. It wraps the target
+    function in ``try ... except ...`` block and logs the start and
+    finish of the function call, with function arguments and execution
+    time in seconds.
 
-    This function will log the followings:
-    * function entry and exit
-    * function execution time
-    * function exception if exist
-    The log level is configurable with hidden constant
-    '_DEBUG_WRAPPER_LOG_LEVEL' in this file.
+    References:
+        https://stackoverflow.com/a/39643469
+        https://stackoverflow.com/a/5929165
 
-    :param func: function to be wrapped and debugged
-    :return: wrapped function ready for debugging
+    Args:
+        logging_level: The logging level for debugging messages. The
+            logger is under the name of function being debugged.
+
+    Returns:
+        A debug wrapper for functions.
+
+    Examples:
+        >>> @debug_wrapper(logging.INFO)
+        ... function_to_debug(args)
+
     """
+    def _debug_wrapper(function: Callable) -> Callable:
 
-    @wraps(func)
-    def _debug_wrapper(
-            *args,
-            **kwargs,
-    ) -> Any:
+        @wraps(function)
+        def _function_with_debug_wrapper(*args, **kwargs) -> Any:
 
-        # get the function name, logger, and logging function
-        _func_name = func.__name__
-        _func_logger = logging.getLogger(_func_name)
-        _log = partial(_func_logger.log, level=_DEBUG_WRAPPER_LOG_LEVEL)
-        _log(msg=f'Calling function f{_func_name} ... ')
+            _function_name = function.__name__
+            _function_arg_spec = getfullargspec(function)
+            _function_arg_names = _function_arg_spec.args
+            # kwargs will replace the default kwargs values
+            _function_arg_dict = {
+                **dict(zip(
+                    _function_arg_names,
+                    args + _function_arg_spec.defaults)),
+                **kwargs,
+            }
+            _function_logger = logging.getLogger(_function_name)
+            _log = partial(_function_logger.log, level=logging_level)
 
-        # fetch and log function params (both args and kwargs)
-        _log(msg=f'Function arguments: ')
-        _arg_dict = {**dict(zip(func.__code__.co_varnames, args)), **kwargs}
-        for _arg_name, _arg_value in _arg_dict.items():
-            _log(msg=f'\t\'{_arg_name}\': {_arg_value} ({type(_arg_value)})')
+            _log(msg=f'Calling function {_function_name} ... ')
+            _log(msg=f'Function arguments: ')
+            for __name, __value in _function_arg_dict.items():
+                __type = type(__value).__name__
+                _log(msg=f'\t{__name} ({__type}): {__value}')
 
-        # execute function and print out exception if necessary
-        _ret = None
-        _start_time = time.time()
-        try:
-            _ret = func(*args, **kwargs)
-            _log(msg=f'Function f{_func_name} finished properly.')
-        except Exception as _exception:
-            _exception_str = str(_exception)
-            _func_logger.exception(_exception_str)
-        _exe_time = time.time() - _start_time
+            _function_ret = None
+            _start_time = time.time()
+            try:
+                _function_ret = function(*args, **kwargs)
+                _log(msg=f'Function {_function_name} finished properly.')
+            except Exception as _exception:
+                _exception_str = str(_exception)
+                _function_logger.exception(_exception_str)
+            _exe_time = time.time() - _start_time
+            _log(msg=f'Function {_function_name} took {_exe_time:.2f} seconds.')
+            return _function_ret
 
-        _log(msg=f'Function execution took {_exe_time:.2f} seconds.')
-        return _ret
+        return _function_with_debug_wrapper
 
     return _debug_wrapper
