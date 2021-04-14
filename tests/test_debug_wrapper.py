@@ -26,7 +26,13 @@ def _test_func(
 
 
 class TestDebugWrapper(unittest.TestCase):
+    """Unit test class for ``debug_wrapper`` function wrapper.
 
+    The test checks the log content and the returned values of
+    ``_test_func`` to make sure that the ``debug_wrapper`` logs all
+    the arguments (and keyword arguments).
+
+    """
     def test_debug_wrapper(self):
         with self.assertLogs(
                 logger='_test_func',

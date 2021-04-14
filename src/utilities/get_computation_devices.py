@@ -1,6 +1,6 @@
 import os
 import warnings
-from typing import Optional, Union, List
+from typing import List, Union
 
 import torch
 from GPUtil import getAvailable
@@ -9,7 +9,7 @@ from GPUtil import getAvailable
 Device = Union[int, torch.device]
 
 
-# Criteria for GPU availability checking
+# Criteria for GPU availability
 _MAX_NUM_GPUS = float('inf')    # max number of GPUs available
 _MAX_GPU_LOAD = 0.2             # max load to be considered as available
 _MAX_GPU_MEM_USED = 0.2         # max memory usage considered as available
@@ -97,8 +97,8 @@ def __restrict_available_gpus_by_torch(
         except AssertionError:
             _warning_msg = \
                 f'CUDA device {__available_gpu}, despite being ' \
-                f'available by GPUtil and visible, is not ' \
-                f'accessible by PyTorch.'
+                f'available by GPUtil and `CUDA_VISIBLE_DEVICES`, ' \
+                f'is not accessible by PyTorch.'
             warnings.warn(_warning_msg)
             print(_warning_msg)
         else:
@@ -118,7 +118,7 @@ def get_computation_devices() -> List[torch.device]:
     ``torch.device`` unless there is none, in which case the function
     returns ``[torch.device('cpu')]``.
 
-    Returns: a list of computation devices (``torch.device``),
+    Returns: A list of computation devices (``torch.device``),
         made of either  one or more GPUs or a single CPU device.
 
     """

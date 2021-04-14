@@ -1,57 +1,61 @@
-"""
-File Name:          get_torch_optimizer.py
-Project:            dl-project-template
-
-File Description:
-
-    This file implements a function named 'get_pytorch_optimizer',
-    which returns any PyTorch optimizer with given parameters.
-
-"""
-from typing import Dict, Iterable, Type, Any, Optional
+from typing import Any, Dict, Iterable
 
 import torch
+from torch import Tensor
 from torch.optim.optimizer import Optimizer
 
-from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
+from src.utilities import is_subclass, get_class_from_module
 
 
-def is_torch_optimizer_class(
-        optimizer_class: Any,
+def _is_torch_optimizer_class(
+        optimizer_class: type,
 ) -> bool:
-    """check if a argument class is a subclass of the base 'Optimizer' class
+    """Check if the given class is a PyTorch optimizer class.
 
-    :param optimizer_class: optimizer class for checking
-    :return: bool indicator for a valid optimizer class
     """
     return is_subclass(optimizer_class, Optimizer)
 
 
 def get_torch_optimizer(
-        optimizer: str,
-        parameters: Iterable,
-        optimizer_kwargs: Optional[Dict[str, Any]],
+        optimizer_name: str,
+        optimizer_params: Iterable[Tensor],
+        optimizer_kwargs: Dict[str, Any],
 ) -> Optimizer:
-    """get a PyTorch optimizers with the given algorithm and parameters
+    """Get a PyTorch optimizer by name and then initialize it.
 
-    :param optimizer: case-sensitive string for optimization algorithm
-    :param parameters: iterable of tensors to optimize
-    :param optimizer_kwargs: dictionary keyword arguments for optimizer
-    hyper-parameters
-    :return: optimizer instance ready to use
+    Args:
+        optimizer_name: A string as the name of target optimizer.
+        optimizer_params: An iterable structure of all the tensors
+            to be optimized by the returned optimizer.
+        optimizer_kwargs: A dictionary of keyword arguments for the
+            returned optimizer.
+
+    Returns:
+        A PyTorch optimizer instance with a name equal or similar to
+        the target name, initialized with the parameters to be
+        optimized and keyword arguments.
+
+    Raises:
+        ValueError: No valid optimizer found in the `torch.optim`
+            with the given name.
+
     """
-    _optimizer_class: Type[Optimizer] = \
-        get_class_from_module(optimizer, torch.optim)
+    try:
+        _optimizer_class: type = \
+            get_class_from_module(optimizer_name, torch.optim)
+    except ValueError:
+        _error_msg = \
+            f'Cannot find an optimizer with a name equal or similar ' \
+            f'to \'{optimizer_name}\' in module \'torch.optim\'.'
+        raise ValueError(_error_msg)
 
-    assert is_torch_optimizer_class(_optimizer_class)
-
-    _valid_optimizer_kwargs: Dict[str, Any] = \
-        get_valid_kwargs(
-            func=_optimizer_class.__init__,
-            kwargs=optimizer_kwargs,
-        )
+    if not _is_torch_optimizer_class(_optimizer_class):
+        _error_msg = \
+            f'Class \'{_optimizer_class}\' found by the name ' \
+            f'\'{optimizer_name}\' is not a valid optimizer class.'
+        raise ValueError(_error_msg)
 
     return _optimizer_class(
-        params=parameters,
-        **_valid_optimizer_kwargs,
+        params=optimizer_params,
+        **optimizer_kwargs,
     )

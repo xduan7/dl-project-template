@@ -17,6 +17,7 @@ flake8 = "^3.8.4"
 pylint = "^2.7.2"
 mypy = "^0.812"
 pytest = "^6.2.2"
+pytorch-model-summary = {git = "https://github.com/amarczew/pytorch_model_summary.git"}
 
 [build-system]
 requires = ["poetry>=1.1.4"]

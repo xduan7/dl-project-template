@@ -1,58 +1,63 @@
-"""
-File Name:          get_torch_lr_scheduler.py
-Project:            dl-project-template
-
-File Description:
-
-    This file implements a function named 'get_pytorch_lr_scheduler',
-    which returns any PyTorch learning rate scheduler with given parameters.
-
-"""
-from typing import Dict, Any, Type
+from typing import Any, Dict
 
 import torch
 from torch.optim.optimizer import Optimizer
 from torch.optim.lr_scheduler import _LRScheduler as LRScheduler
 
-from src.utilities import is_subclass, get_class_from_module, get_valid_kwargs
+from src.utilities import is_subclass, get_class_from_module
 
 
-def is_torch_lr_scheduler_class(
+def _is_torch_lr_scheduler_class(
         lr_scheduler_class: Any,
 ) -> bool:
-    """check if a argument class is a subclass of the base 'LRScheduler' class
+    """Check if the given class is a PyTorch LR scheduler class.
 
-    :param lr_scheduler_class: learning rate scheduler class for checking
-    :return: bool indicator for a valid learning rate scheduler  class
     """
     return is_subclass(lr_scheduler_class, LRScheduler)
 
 
 def get_torch_lr_scheduler(
-        lr_scheduler: str,
-        optimizer: Optimizer,
+        lr_scheduler_name: str,
+        lr_scheduler_optim: Optimizer,
         lr_scheduler_kwargs: Dict[str, Any],
 ) -> LRScheduler:
-    """get a PyTorch learning rate scheduler with a given optimizer and
-    parameters
+    """Get a PyTorch learning rate (lr) scheduler by name and then
+    initialize it.
 
-    :param lr_scheduler: case-sensitive string for learning rate scheduler
-    name
-    :param optimizer: PyTorch optimizer for learning rate scheduling
-    :param lr_scheduler_kwargs: dictionary keyword arguments for scheduler
-    hyper-parameters
-    :return: learning rate scheduler of type LRScheduler
+    Args:
+        lr_scheduler_name: A string as the name of target lr scheduler.
+        lr_scheduler_optim: The optimizer whose lr to be scheduled.
+        lr_scheduler_kwargs: A dictionary of keyword arguments for the
+            returned lr scheduler.
+
+    Returns:
+        A PyTorch lr scheduler instance with a name equal or similar to
+        the target name, initialized with the optimizer whose lr to be
+        scheduled and keyword arguments.
+
+    Raises:
+        ValueError: No valid optimizer found in the
+            `torch.optim.lr_scheduler` with the given name.
+
     """
-    _lr_scheduler_class: Type[LRScheduler] = \
-        get_class_from_module(lr_scheduler, torch.optim.lr_scheduler)
+    try:
+        _lr_scheduler_class: type = \
+            get_class_from_module(lr_scheduler_name, torch.optim.lr_scheduler)
+    except ValueError:
+        _error_msg = \
+            f'Cannot find an learning rate scheduler with a name ' \
+            f'equal or similar to \'{lr_scheduler_name}\' in ' \
+            f'module \'torch.optim.lr_scheduler\'.'
+        raise ValueError(_error_msg)
 
-    _valid_lr_scheduler_kwargs: Dict[str, Any] = \
-        get_valid_kwargs(
-            func=_lr_scheduler_class.__init__,
-            kwargs=lr_scheduler_kwargs,
-        )
+    if not _is_torch_lr_scheduler_class(_lr_scheduler_class):
+        _error_msg = \
+            f'Class \'{_lr_scheduler_class}\' found by the name ' \
+            f'\'{lr_scheduler_name}\' is not a valid learning rate ' \
+            f'scheduler class.'
+        raise ValueError(_error_msg)
 
     return _lr_scheduler_class(
-        optimizer=optimizer,
-        **_valid_lr_scheduler_kwargs,
+        optimizer=lr_scheduler_optim,
+        **lr_scheduler_kwargs,
     )
