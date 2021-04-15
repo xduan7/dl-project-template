@@ -4,23 +4,21 @@ The template assumes [PyTorch](https://pytorch.org/) as the deep learning framew
 However, one can easily transfer and utilize the template to any project implemented with other frameworks.
 
 
-## Table of Contents  
-- [Dependencies](#dependencies)
+## Table of Contents
 - [Getting Started](#getting-started)
 - [Template Layout](#template-layout)
 - [Extra Packages](#extra-packages)
-    - [Data Validation and Cleaning](#data-validation-and-cleaning)
+    - [Data Analysis, Validation, and Cleaning](#data-analysis-validation-and-cleaning)
     - [Performance and Caching](#performance-and-caching)
     - [Data Version Control and Workflow](#data-version-control-and-workflow)
     - [Visualization and Presentation](#visualization-and-presentation)
     - [Project Lifecycles and Hyperparameter Optimization](#project-lifecycles-and-hyperparameter-optimization)
-    - [PyTorch Extensions](#pytorch-extensions)
+    - [Other PyTorch Extensions](#other-pytorch-extensions)
     - [Miscellaneous](#miscellaneous)
 - [Resources](#resources)
     - [Datasets](#datasets)
     - [Readings](#readings)
     - [Other ML/DL Templates](#other-mldl-templates)
-- [Future Tasks](#future-tasks)
 - [Authors](#authors)
 - [License](#license)
 
@@ -213,13 +211,6 @@ dl-project-template
 ### Other ML/DL Templates:
 - [Cookiecutter Data Science](https://github.com/drivendata/cookiecutter-data-science): a logical, reasonably standardized, but flexible project structure
 - [PyTorch Template Project](https://github.com/victoresque/pytorch-template): PyTorch deep learning project template
-
-
-## Future Tasks
-- [ ] ML/DL projects process flowchart 
-    - [ ] definition of several major steps
-    - [ ] clarify motivation and deliverables
-- [ ] small example for demonstration (omniglot?)
 
 
 ## Authors
