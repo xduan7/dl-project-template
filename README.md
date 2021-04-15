@@ -25,25 +25,6 @@ However, one can easily transfer and utilize the template to any project impleme
 - [License](#license)
 
 
-## Dependencies
-```text
-required:
-    python>=3.7
-    numpy>=1.18
-    pandas>=1.0
-    torch>=1.4
-    scikit-learn>=0.22
-
-optional:
-    poetry>=0.12
-    flake8>=3.7
-    pylint>=2.4
-    mypy>=0.76
-    pytest>=5.3
-    GPUtil>=1.4
-```
-
-
 ## Getting Started
 You can fork this repo and use it as a template when creating a new repo on Github like this:
 <p align="center">
@@ -61,8 +42,9 @@ Alternatively, you can simply download this repo in zipped format and get starte
 
 Next, you can install all the dependencies by typing the following command in project root:
 ```bash
+conda careate -n project_name python=3.8
 conda install poetry  # or 'pip install poetry'
-poetry install
+poetry new project_name
 ```
 
 Finally, you can wrap up the setup by manually install and update any packages you'd like. 
