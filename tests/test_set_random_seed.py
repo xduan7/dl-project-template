@@ -5,7 +5,7 @@ from typing import Tuple
 import torch
 import numpy as np
 
-from src.utilities.set_random_seed import set_random_seed
+from src.utilities import set_random_seed
 
 
 _RANDOM_SEED: int = random.randint(0, 100)

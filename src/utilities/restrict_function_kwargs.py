@@ -3,7 +3,7 @@ from inspect import getfullargspec
 from typing import Any, Callable, Dict, List
 
 
-def restrict_func_kwargs(
+def restrict_function_kwargs(
         func: Callable,
         kwargs: Dict[str, Any],
 ) -> Dict[str, Any]:

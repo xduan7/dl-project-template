@@ -78,7 +78,7 @@ def get_class_from_module(
     return _class
 
 
-def get_func_from_module(
+def get_function_from_module(
         func_name: str,
         module: ModuleType,
 ) -> Callable:
