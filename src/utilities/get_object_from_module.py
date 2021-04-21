@@ -3,7 +3,7 @@ import inspect
 from types import ModuleType
 from typing import Any, Callable, Dict, Optional, Type
 
-from utilities import get_closest_match
+from src.utilities import get_closest_match
 
 
 def get_object_from_module(
