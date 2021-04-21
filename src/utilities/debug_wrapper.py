@@ -39,10 +39,12 @@ def debug_wrapper(logging_level: int):
             _func_arg_spec = getfullargspec(func)
             _func_arg_names = _func_arg_spec.args
             # kwargs will replace the default kwargs values
+            _func_default_args = \
+                (_func_arg_spec.defaults if _func_arg_spec.defaults else ())
             _function_arg_dict = {
                 **dict(zip(
                     _func_arg_names,
-                    args + _func_arg_spec.defaults)),
+                    args + _func_default_args)),
                 **kwargs,
             }
             _function_logger = logging.getLogger(_func_name)
