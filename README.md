@@ -84,7 +84,7 @@ dl-project-template
 
 
 ## Extra Packages
-### Data Analysis, Validation and Cleaning
+### Data Analysis, Augmentation, Validation and Cleaning
 - [Great Expectation](https://docs.greatexpectations.io/en/latest/): data validation, documenting, and profiling
 - [Cerberus](http://docs.python-cerberus.org/en/stable/): lightweight data validation functionality
 - [PyJanitor](https://pyjanitor.readthedocs.io/): Pandas extension for data cleaning
@@ -96,6 +96,7 @@ dl-project-template
 - [whale](https://docs.whale.cx/): a lightweight data discovery, documentation, and quality engine for data warehouse
 - [bamboolib](https://bamboolib.8080labs.com/): a tool for fast and easy data exploration & transformation of pandas DataFrames
 - [pandas-summary](https://github.com/mouradmourafiq/pandas-summary): an extension to pandas dataframes describe function
+- [AugLy](https://github.com/facebookresearch/AugLy): a data augmentations library for audio, image, text, and video. 
 
 ### Performance and Caching
 - [Numba](https://numba.pydata.org/): JIT compiler that translates Python and NumPy to fast machine code
