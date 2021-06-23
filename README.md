@@ -50,7 +50,7 @@ Please refer to the [Extra Packages](#extra-packages) section for some awesome p
 
 
 ## Template Layout
-The project layout with the usage for each folder is shown below:
+
 ```text
 dl-project-template
 .
@@ -70,7 +70,7 @@ dl-project-template
 |
 ├── notebooks           # Jupyter Notebooks (mostly for data processing and visualization)
 │── src    
-│   ├── datasets        # data processing classes, functions, and scripts
+│   ├── data            # data processing classes, functions, and scripts
 │   ├── evaluations     # evaluation classes and functions (metrics, visualization, etc.)
 │   ├── experiments     # experiment configuration files
 │   ├── modules         # activations, layers, modules, and networks (subclass of torch.nn.Module)

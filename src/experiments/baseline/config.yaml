@@ -1,0 +1,33 @@
+###############################################################################
+# Configuration for Microsoft NNI
+# Reference: https://nni.readthedocs.io/en/latest/Tutorial/ExperimentConfig.html
+#
+# Run the NNI experiment:
+#   $ nnictl create --config ${PEOJ_DIR}/src/experiments/baseline/config.yaml --debug --port ${PROT_NUM}
+#
+# Notes:
+# - sshKeyPath demands PEM formatting
+# - codeDir will be copied over to worker machines and cannot be empty
+# - localhost (as nniManagerIp) cannot receive log from worker machines over http
+# - CUDA_VISIBLE_DEVICES will be set for the first instruction in trail command only
+#
+###############################################################################
+
+experimentName: "baseline"
+
+maxExperimentDuration: 7d
+maxTrialNumber: 1000
+searchSpaceFile: "search_space.json"
+useAnnotation: false
+
+trialConcurrency: 1
+trialGpuNumber: 1  # number of GPUs used for a single trial
+trialCommand: CUDA_DEVICE_ORDER=PCI_BUS_ID PYTHONPATH="${PEOJ_DIR}:${PYTHONPATH}" ${PYTHON_PATH} ${PEOJ_DIR}/src/experiments/baseline/code_dir/launcher.py
+trialCodeDirectory: code_dir
+
+tuner:
+  name: GridSearch
+
+trainingService:
+  platform: local
+  useActiveGpu: false
